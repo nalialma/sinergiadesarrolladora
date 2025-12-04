@@ -1,22 +1,163 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sinergia Constructora - Líder en desarrollos inmobiliarios en Salta Argentina. Proyectos residenciales de lujo, diseño inteligente y construcción de excelencia. Viviendas modernas en Zona Sur.">
-    <meta name="keywords" content="constructora Salta, desarrolladora inmobiliaria Salta, viviendas modernas Salta, proyectos inmobiliarios Salta Argentina">
+     <!-- SEO Meta Tags Optimizadas para NOA Argentina -->
+    <meta name="description" content="Sinergia Constructora: Desarrollos inmobiliarios de lujo en Salta y el NOA. Proyectos sostenibles, diseño inteligente y calidad premium en Zona Sur.">
+    <meta name="keywords" content="constructora Salta, desarrollos inmobiliarios NOA, viviendas de lujo Salta, construcción sostenible Argentina, proyectos inmobiliarios Tucumán, Jujuy, Catamarca">
     <meta name="author" content="Sinergia Constructora">
-    <meta name="theme-color" content="#55A203">
-    <meta property="og:title" content="Sinergia Constructora - Desarrolladora Inmobiliaria Nº1 en Salta">
-    <meta property="og:description" content="Proyectos residenciales de lujo con diseño inteligente. EKO Distrito - Viviendas modernas en Zona Sur, Salta.">
-    <meta property="og:image" content="https://i.pinimg.com/736x/e1/d1/39/e1d1390df5ce9aa4462a762266d51507.jpg">
-    <meta property="og:url" content="https://sinergiadesarrolladora.com">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://sinergiadesarrolladora.com">
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sinergiadesarrolladora.com">
+    <meta property="og:title" content="Sinergia Constructora - Desarrollos Inmobiliarios en el NOA">
+    <meta property="og:description" content="Desarrollos inmobiliarios de lujo en Salta y el NOA. Diseño inteligente y sostenibilidad.">
+    <meta property="og:image" content="https://i.pinimg.com/736x/e1/d1/39/e1d1390df5ce9aa4462a762266d51507.jpg">
     
-    <title>Sinergia Constructora - Desarrolladora Inmobiliaria Nº1 en Salta, Argentina</title>
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sinergia Constructora - Desarrollos Inmobiliarios">
+    <meta name="twitter:description" content="Desarrollos inmobiliarios de lujo en Salta y el NOA. Diseño inteligente y sostenibilidad.">
+    <meta name="twitter:image" content="https://i.pinimg.com/736x/e1/d1/39/e1d1390df5ce9aa4462a762266d51507.jpg">
+    
+    <title>Sinergia Constructora - Desarrollos Inmobiliarios de Lujo en el NOA</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%2355A203' width='100' height='100'/><path fill='%23FC9E07' d='M50 20 L65 35 L50 50 L35 35 Z'/></svg>">
-    
+
+    <!-- Schema.org - RealEstateListing -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Sinergia Constructora",
+      "description": "Desarrolladora inmobiliaria especializada en proyectos de lujo en el NOA argentino",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Zona Sur",
+        "addressLocality": "Salta",
+        "addressRegion": "Salta",
+        "postalCode": "4400",
+        "addressCountry": "AR"
+      },
+      "telephone": "+54 9 387 2233151",
+      "email": "info@sinergiadesarrolladora.com",
+      "areaServed": ["Salta", "Tucumán", "Jujuy", "Catamarca"],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -24.7821,
+        "longitude": -65.4119
+      }
+    }
+    </script>
+
     <style>
+        /* Estilos CSS originales */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --color-primary: #55A203;
+            --color-primary-light: #8CD51D;
+            --color-secondary: #FC9E07;
+            --color-secondary-light: #F8EF0C;
+            --color-dark: #2a2a2a;
+            --color-light: #f8f8f6;
+            --color-white: #ffffff;
+            --font-primary: 'Avenir Next', 'Arial', sans-serif;
+            --font-secondary: 'Open Sans', sans-serif;
+        }
+        
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body { 
+            font-family: var(--font-secondary); 
+            color: var(--color-dark); 
+            line-height: 1.6; 
+            overflow-x: hidden; 
+            background: var(--color-white); 
+        }
+
+        /* Splash Screen Styles */
+        .splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 1s ease-in-out;
+            opacity: 1;
+            gap: 2rem;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .splash-screen::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .splash-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .splash-house-svg {
+            width: clamp(150px, 30vw, 250px);
+            height: clamp(150px, 30vw, 250px);
+            opacity: 0;
+            transform: scale(0) rotate(-45deg);
+            transition: all 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        .splash-house-svg.animate {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
+        }
+
+        .splash-isologo {
+            max-width: clamp(250px, 50vw, 400px);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1.5s cubic-bezier(0.25, 0.1, 0.25, 1) 1s;
+        }
+
+        .splash-isologo.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .splash-text {
+            color: white;
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            max-width: 600px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1.5s cubic-bezier(0.25, 0.1, 0.25, 1) 1.5s;
+        }
+
+        .splash-text.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --color-primary: #55A203;
@@ -66,6 +207,219 @@
             width: 100%; 
         }
         
+ /* [Resto del CSS anterior] */
+        .splash-house-svg { 
+            width: clamp(100px, 20vw, 180px); 
+            height: clamp(100px, 20vw, 180px); 
+            opacity: 0; 
+            animation: 
+                scaleInHouse 1s ease-out 0.5s forwards, 
+                scaleOutHouse 1s ease-out 2.5s forwards; 
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2)); 
+        }
+        @keyframes scaleInHouse { 
+            from { opacity: 0; transform: scale(0) rotate(-45deg); } 
+            to { opacity: 1; transform: scale(1) rotate(0deg); } 
+        }
+        @keyframes scaleOutHouse { 
+            from { opacity: 1; transform: scale(1) rotate(0deg); } 
+            to { opacity: 0; transform: scale(0) rotate(45deg); } 
+        }
+        
+        .splash-screen { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            z-index: 9999; 
+            animation: fadeOutScreen 1s ease-in-out 4s forwards; 
+        }
+
+
+.splash-house-svg { 
+    opacity: 0; 
+    animation: scaleInHouse 0.8s ease-out forwards, scaleOutHouse 0.8s ease-out 1.5s forwards; 
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2)); 
+}
+
+@keyframes scaleInHouse { 
+    from { opacity: 0; transform: scale(0) rotate(-45deg); } 
+    to { opacity: 1; transform: scale(1) rotate(0deg); } 
+}
+
+@keyframes scaleOutHouse { 
+    from { opacity: 1; transform: scale(1) rotate(0deg); } 
+    to { opacity: 0; transform: scale(0) rotate(45deg); } 
+}
+
+
+        .splash-screen { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            z-index: 9999; 
+            animation: fadeOutScreen 0.1s ease-in-out 2.5s forwards; 
+        }
+        @keyframes fadeOutScreen { 
+            to { opacity: 0; visibility: hidden; } 
+        }
+        .splash-content { 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 2rem; 
+            position: relative; 
+            z-index: 2; 
+            text-align: center; 
+        }
+        .splash-logo { 
+            width: clamp(200px, 50vw, 320px); 
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+            gap: 2rem; 
+            opacity: 0; 
+            animation: fadeInLogo 1.2s ease-out 1.8s forwards; 
+        }
+        @keyframes fadeInLogo { 
+            from { opacity: 0; } 
+            to { opacity: 1; } 
+        }
+        .splash-house-svg { 
+            width: clamp(100px, 20vw, 180px); 
+            height: clamp(100px, 20vw, 180px); 
+            opacity: 0; 
+            animation: scaleInHouse 0.1s ease-out forwards, scaleOutHouse 0.8s ease-out 1.5s forwards; 
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2)); 
+        }
+        @keyframes scaleInHouse { 
+            from { opacity: 0; transform: scale(0) rotate(-45deg); } 
+            to { opacity: 1; transform: scale(1) rotate(0deg); } 
+        }
+        @keyframes scaleOutHouse { 
+            from { opacity: 1; transform: scale(1) rotate(0deg); } 
+            to { opacity: 0; transform: scale(0) rotate(45deg); } 
+        }
+        .splash-text { 
+            width: clamp(220px, 65vw, 380px); 
+            height: auto; 
+            background: url('https://i.pinimg.com/736x/e1/d1/39/e1d1390df5ce9aa4462a762266d51507.jpg') center/contain no-repeat; 
+            opacity: 0; 
+            animation: fadeInText 0.8s ease-out 3.0s forwards; 
+            aspect-ratio: 1/1; 
+        }
+        @keyframes fadeInText { 
+            to { opacity: 1; } 
+        }
+
+        .splash-screen { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            z-index: 9999; 
+            animation: fadeOutScreen 1s ease-in-out 4s forwards; 
+        }
+
+
+.splash-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+@keyframes fadeOutScreen {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.splash-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.splash-logo {
+    width: 250px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    position: relative;
+    opacity: 0;
+    animation: fadeInLogo 0.8s ease-out 0.2s forwards;
+}
+
+@keyframes fadeInLogo {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.splash-svg {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    animation: scaleIn 0.6s ease-out forwards;
+}
+
+.splash-svg.house {
+    animation-delay: 0.4s;
+}
+
+.splash-svg.helmet {
+    animation-delay: 1.4s;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0) rotate(-45deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+
+ @keyframes fadeInText {
+    to {
+        opacity: 1;
+    }
+}
+
         .logo { 
             display: flex; 
             align-items: center; 
@@ -963,39 +1317,6 @@
                 height: 200px; 
             }
         }
-
-              /* [Resto del CSS anterior] */
-        .splash-house-svg { 
-            width: clamp(100px, 20vw, 180px); 
-            height: clamp(100px, 20vw, 180px); 
-            opacity: 0; 
-            animation: 
-                scaleInHouse 1s ease-out 0.5s forwards, 
-                scaleOutHouse 1s ease-out 2.5s forwards; 
-            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2)); 
-        }
-        @keyframes scaleInHouse { 
-            from { opacity: 0; transform: scale(0) rotate(-45deg); } 
-            to { opacity: 1; transform: scale(1) rotate(0deg); } 
-        }
-        @keyframes scaleOutHouse { 
-            from { opacity: 1; transform: scale(1) rotate(0deg); } 
-            to { opacity: 0; transform: scale(0) rotate(45deg); } 
-        }
-        
-        .splash-screen { 
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            z-index: 9999; 
-            animation: fadeOutScreen 1s ease-in-out 4s forwards; 
-        }
     </style>
 </head>
 <body>
@@ -1003,43 +1324,34 @@
 <div class="splash-screen">
     <div class="splash-content">
         <div class="splash-logo">
-            <svg class="splash-house-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
-                <defs>
-                    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-                        <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
-                    </filter>
-                </defs>
-                <!-- Estructura principal de la casa -->
-                <path d="M50 10 L90 40 L90 90 L10 90 L10 40 Z" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linejoin="round" filter="url(#shadow)"/>
-                <!-- Techo triangular -->
-                <path d="M50 10 L30 30 M50 10 L70 30" stroke="#F8EF0C" stroke-width="2.5" stroke-linecap="round" filter="url(#shadow)"/>
-                <!-- Puerta principal -->
-                <rect x="42" y="65" width="16" height="25" stroke="#FC9E07" stroke-width="2" fill="none" filter="url(#shadow)"/>
-                <circle cx="55" cy="77" r="1.5" fill="#FC9E07"/>
-                <!-- Ventanas superiores -->
-                <rect x="25" y="50" width="12" height="12" stroke="#F8EF0C" stroke-width="2" fill="none" filter="url(#shadow)"/>
-                <line x1="31" y1="50" x2="31" y2="62" stroke="#F8EF0C" stroke-width="1"/>
-                <line x1="25" y1="56" x2="37" y2="56" stroke="#F8EF0C" stroke-width="1"/>
-                
-                <rect x="63" y="50" width="12" height="12" stroke="#F8EF0C" stroke-width="2" fill="none" filter="url(#shadow)"/>
-                <line x1="69" y1="50" x2="69" y2="62" stroke="#F8EF0C" stroke-width="1"/>
-                <line x1="63" y1="56" x2="75" y2="56" stroke="#F8EF0C" stroke-width="1"/>
-                
-                <!-- Ventanas inferiores -->
-                <rect x="20" y="72" width="10" height="10" stroke="#ffffff" stroke-width="1.5" fill="none" filter="url(#shadow)"/>
-                <rect x="70" y="72" width="10" height="10" stroke="#ffffff" stroke-width="1.5" fill="none" filter="url(#shadow)"/>
-                
-                <!-- Detalles decorativos - flores/plantas -->
-                <circle cx="15" cy="88" r="2" fill="#F8EF0C"/>
-                <path d="M15 84 Q13 86 15 88 Q17 86 15 84" stroke="#F8EF0C" stroke-width="1" fill="none"/>
-                
-                <circle cx="85" cy="88" r="2" fill="#F8EF0C"/>
-                <path d="M85 84 Q83 86 85 88 Q87 86 85 84" stroke="#F8EF0C" stroke-width="1" fill="none"/>
+                        <!-- SVG Casa -->
+            <svg class="splash-svg house" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+                <path d="M50 10 L90 40 L90 90 L10 90 L10 40 Z" stroke="#55A203" stroke-width="3" fill="none" stroke-linejoin="round"/>
+                <path d="M50 10 L30 30 M50 10 L70 30" stroke="#FC9E07" stroke-width="2" stroke-linecap="round"/>
+                <path d="M35 60 L35 90 M65 60 L65 90 M35 70 L65 70" stroke="#55A203" stroke-width="2"/>
+                <rect x="40" y="50" width="20" height="15" stroke="#FC9E07" stroke-width="2" fill="none"/>
             </svg>
-            <div class="splash-text"></div>
+
+
+        
+              <img 
+                src="https://i.pinimg.com/736x/80/e3/dc/80e3dcf22e2f5554d6e107b95739f7fa.jpg" 
+                alt="Sinergia Constructora Isologo" 
+                class="splash-isologo"
+            >
+            
+            <p class="splash-text">
+                Desarrollos inmobiliarios inteligentes en el corazón del NOA
+            </p>
         </div>
     </div>
+    </div>
 </div>
+
+        </div>
+        </div>
+</div>
+    <!-- HEADER & NAVIGATION -->
 
 <header>
     <nav>
@@ -1412,6 +1724,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script>
+
      // Depuración de SVG
         document.addEventListener('DOMContentLoaded', () => {
             const splashHouseSVG = document.querySelector('.splash-house-svg');
@@ -1429,7 +1742,7 @@
             }
         });
 
-        
+ 
     // HEADER DINÁMICO: Ocultar/Mostrar al scroll
     let lastScrollTop = 0;
     const header = document.querySelector('header');
@@ -1596,9 +1909,6 @@
         contactForm.reset();
     });
 
-
-
-    
     // Smooth scroll para links internos
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
