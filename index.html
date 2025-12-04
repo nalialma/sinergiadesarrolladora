@@ -963,6 +963,39 @@
                 height: 200px; 
             }
         }
+
+              /* [Resto del CSS anterior] */
+        .splash-house-svg { 
+            width: clamp(100px, 20vw, 180px); 
+            height: clamp(100px, 20vw, 180px); 
+            opacity: 0; 
+            animation: 
+                scaleInHouse 1s ease-out 0.5s forwards, 
+                scaleOutHouse 1s ease-out 2.5s forwards; 
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2)); 
+        }
+        @keyframes scaleInHouse { 
+            from { opacity: 0; transform: scale(0) rotate(-45deg); } 
+            to { opacity: 1; transform: scale(1) rotate(0deg); } 
+        }
+        @keyframes scaleOutHouse { 
+            from { opacity: 1; transform: scale(1) rotate(0deg); } 
+            to { opacity: 0; transform: scale(0) rotate(45deg); } 
+        }
+        
+        .splash-screen { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            z-index: 9999; 
+            animation: fadeOutScreen 1s ease-in-out 4s forwards; 
+        }
     </style>
 </head>
 <body>
@@ -1379,6 +1412,24 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script>
+     // Depuración de SVG
+        document.addEventListener('DOMContentLoaded', () => {
+            const splashHouseSVG = document.querySelector('.splash-house-svg');
+            console.log('SVG Element:', splashHouseSVG);
+            
+            // Añadir evento para verificar visibilidad
+            if (splashHouseSVG) {
+                splashHouseSVG.addEventListener('animationstart', (e) => {
+                    console.log('Animation started:', e.animationName);
+                });
+                
+                splashHouseSVG.addEventListener('animationend', (e) => {
+                    console.log('Animation ended:', e.animationName);
+                });
+            }
+        });
+
+        
     // HEADER DINÁMICO: Ocultar/Mostrar al scroll
     let lastScrollTop = 0;
     const header = document.querySelector('header');
@@ -1545,6 +1596,9 @@
         contactForm.reset();
     });
 
+
+
+    
     // Smooth scroll para links internos
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
