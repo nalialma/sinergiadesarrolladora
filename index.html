@@ -3,65 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags Optimizadas para NOA Argentina -->
     <meta name="description" content="Sinergia Constructora: Desarrollos inmobiliarios de lujo en Salta y el NOA. Proyectos sostenibles, diseño inteligente y calidad premium en Zona Sur.">
-    <meta name="keywords" content="constructora Salta, desarrollos inmobiliarios NOA, viviendas de lujo Salta, construcción sostenible Argentina, proyectos inmobiliarios Tucumán, Jujuy, Catamarca">
+    <meta name="keywords" content="constructora Salta, desarrollos inmobiliarios NOA, viviendas de lujo Salta, construcción sostenible Argentina">
     <meta name="author" content="Sinergia Constructora">
     <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <link rel="canonical" href="https://sinergiadesarrolladora.com">
-    
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sinergiadesarrolladora.com">
     <meta property="og:title" content="Sinergia Constructora - Desarrollos Inmobiliarios en el NOA">
     <meta property="og:description" content="Desarrollos inmobiliarios de lujo en Salta y el NOA. Diseño inteligente y sostenibilidad.">
-    <meta property="og:image" content="https://i.pinimg.com/736x/e1/d1/39/e1d1390df5ce9aa4462a762266d51507.jpg">
-    
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sinergia Constructora - Desarrollos Inmobiliarios">
-    <meta name="twitter:description" content="Desarrollos inmobiliarios de lujo en Salta y el NOA. Diseño inteligente y sostenibilidad.">
-    <meta name="twitter:image" content="https://i.pinimg.com/736x/e1/d1/39/e1d1390df5ce9aa4462a762266d51507.jpg">
-    
-    <title>Sinergia Constructora - Desarrollos Inmobiliarios de Lujo en el NOA</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%2355A203' width='100' height='100'/><path fill='%23FC9E07' d='M50 20 L65 35 L50 50 L35 35 Z'/></svg>">
-
-    <!-- Schema.org - RealEstateListing -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "RealEstateAgent",
-      "name": "Sinergia Constructora",
-      "description": "Desarrolladora inmobiliaria especializada en proyectos de lujo en el NOA argentino",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Zona Sur",
-        "addressLocality": "Salta",
-        "addressRegion": "Salta",
-        "postalCode": "4400",
-        "addressCountry": "AR"
-      },
-      "telephone": "+54 9 387 2233151",
-      "email": "info@sinergiadesarrolladora.com",
-      "areaServed": ["Salta", "Tucumán", "Jujuy", "Catamarca"],
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -24.7821,
-        "longitude": -65.4119
-      }
-    }
-    </script>
+    <title>Sinergia Constructora - Desarrollos Inmobiliarios de Lujo</title>
 
     <style>
-        /* ROOT VARIABLES */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --color-primary: #55A203;
             --color-primary-light: #8CD51D;
             --color-secondary: #FC9E07;
-            --color-secondary-light: #F8EF0C;
             --color-dark: #2a2a2a;
             --color-light: #f8f8f6;
             --color-white: #ffffff;
@@ -78,13 +35,11 @@
             background: var(--color-white); 
         }
 
-        /* ==================== SPLASH SCREEN ==================== */
+        /* SPLASH SCREEN */
         .splash-screen {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
             display: flex;
             justify-content: center;
@@ -96,10 +51,8 @@
         .splash-screen::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: rgba(0, 0, 0, 0.4);
             z-index: 1;
         }
@@ -150,44 +103,24 @@
         }
 
         @keyframes fadeOutScreen {
-            to { 
-                opacity: 0; 
-                visibility: hidden; 
-            }
+            to { opacity: 0; visibility: hidden; }
         }
-
         @keyframes fadeInLogo {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from { opacity: 0; } to { opacity: 1; }
         }
-
         @keyframes scaleInHouse {
-            from { 
-                opacity: 0; 
-                transform: scale(0) rotate(-45deg); 
-            }
-            to { 
-                opacity: 1; 
-                transform: scale(1) rotate(0deg); 
-            }
+            from { opacity: 0; transform: scale(0) rotate(-45deg); }
+            to { opacity: 1; transform: scale(1) rotate(0deg); }
         }
-
         @keyframes scaleOutHouse {
-            from { 
-                opacity: 1; 
-                transform: scale(1) rotate(0deg); 
-            }
-            to { 
-                opacity: 0; 
-                transform: scale(0) rotate(45deg); 
-            }
+            from { opacity: 1; transform: scale(1) rotate(0deg); }
+            to { opacity: 0; transform: scale(0) rotate(45deg); }
         }
 
-        /* ==================== HEADER & NAVIGATION ==================== */
+        /* HEADER */
         header { 
             position: fixed; 
-            top: 0; 
-            width: 100%; 
+            top: 0; width: 100%; 
             background: white; 
             box-shadow: 0 2px 15px rgba(0,0,0,0.08); 
             z-index: 1000; 
@@ -195,13 +128,8 @@
             transform: translateY(0); 
         }
         
-        header.hidden { 
-            transform: translateY(-100%); 
-        }
-        
-        header.scrolled { 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
-        }
+        header.hidden { transform: translateY(-100%); }
+        header.scrolled { box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         
         nav { 
             display: flex; 
@@ -217,33 +145,20 @@
             display: flex; 
             align-items: center; 
             text-decoration: none; 
-            transition: opacity 0.3s ease; 
             min-width: 180px; 
             cursor: pointer; 
-        }
-        
-        .logo:hover { 
-            opacity: 0.9; 
         }
         
         .logo-img { 
             max-width: 180px; 
             height: auto; 
             width: 100%; 
-            display: block; 
-            transition: transform 0.3s ease; 
-        }
-        
-        .logo:hover .logo-img { 
-            transform: scale(1.05); 
         }
         
         .nav-menu { 
             display: flex; 
             gap: 2.5rem; 
             list-style: none; 
-            margin: 0; 
-            padding: 0; 
         }
         
         .nav-menu a { 
@@ -285,19 +200,11 @@
             border-radius: 2px; 
         }
         
-        .hamburger.active span:nth-child(1) { 
-            transform: rotate(45deg) translate(8px, 8px); 
-        }
-        
-        .hamburger.active span:nth-child(2) { 
-            opacity: 0; 
-        }
-        
-        .hamburger.active span:nth-child(3) { 
-            transform: rotate(-45deg) translate(7px, -7px); 
-        }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
 
-        /* ==================== HERO ==================== */
+        /* HERO */
         .hero { 
             margin-top: 60px; 
             height: 100vh; 
@@ -310,8 +217,7 @@
         
         .hero-carousel { 
             position: absolute; 
-            top: 0; 
-            left: 0; 
+            top: 0; left: 0;
             width: 100%; 
             height: 100%; 
             z-index: 1; 
@@ -319,8 +225,7 @@
         
         .hero-slide { 
             position: absolute; 
-            top: 0; 
-            left: 0; 
+            top: 0; left: 0;
             width: 100%; 
             height: 100%; 
             background-size: cover; 
@@ -329,22 +234,13 @@
             transition: opacity 3s ease-in-out; 
         }
         
-        .hero-slide.active { 
-            opacity: 1; 
-        }
-        
-        .hero-slide-1 { 
-            background-image: url('https://i.pinimg.com/736x/1d/a8/6c/1da86c052debef1b36be51e96760d06b.jpg'); 
-        }
-        
-        .hero-slide-2 { 
-            background-image: url('https://i.pinimg.com/736x/4d/fc/56/4dfc56e4855f1c93b9d553bedeaf219a.jpg'); 
-        }
+        .hero-slide.active { opacity: 1; }
+        .hero-slide-1 { background-image: url('https://i.pinimg.com/736x/1d/a8/6c/1da86c052debef1b36be51e96760d06b.jpg'); }
+        .hero-slide-2 { background-image: url('https://i.pinimg.com/736x/4d/fc/56/4dfc56e4855f1c93b9d553bedeaf219a.jpg'); }
         
         .hero-overlay { 
             position: absolute; 
-            top: 0; 
-            left: 0; 
+            top: 0; left: 0;
             width: 100%; 
             height: 100%; 
             background: rgba(0, 0, 0, 0.35); 
@@ -368,7 +264,6 @@
             letter-spacing: -1px; 
             animation: slideUp 0.8s ease-out 0.2s forwards; 
             opacity: 0; 
-            line-height: 1.2; 
         }
         
         .hero-content p { 
@@ -376,7 +271,6 @@
             margin-bottom: 2.5rem; 
             opacity: 0; 
             animation: slideUp 0.8s ease-out 0.4s forwards; 
-            line-height: 1.6; 
         }
         
         @keyframes slideUp { 
@@ -405,7 +299,7 @@
             background: #fd8f00; 
         }
 
-        /* ==================== CONTAINERS & SECTIONS ==================== */
+        /* CONTAINERS */
         .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
         
         .section-title { 
@@ -417,9 +311,7 @@
             letter-spacing: -1px; 
         }
         
-        .section-title span { 
-            color: var(--color-primary); 
-        }
+        .section-title span { color: var(--color-primary); }
         
         .section-subtitle { 
             font-size: 1.1rem; 
@@ -428,7 +320,7 @@
             margin-bottom: 3rem; 
         }
 
-        /* ==================== ABOUT SECTION ==================== */
+        /* ABOUT SECTION */
         #sobre-nosotros { 
             padding: 5rem 2rem; 
             background: white; 
@@ -452,11 +344,16 @@
         }
         
         .about-image-circle { 
-            width: 150px; 
-            height: 150px; 
+            width: 300px; 
+            height: 300px; 
             border-radius: 50%; 
             overflow: hidden; 
-            box-shadow: 0 20px 60px rgba(85, 162, 3, 0.2); 
+            box-shadow: 0 20px 60px rgba(85, 162, 3, 0.2);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
         }
         
         .about-image-carousel { 
@@ -466,6 +363,8 @@
             position: absolute;
             opacity: 0;
             transition: opacity 0.8s ease-in-out;
+            top: 0;
+            left: 0;
         }
         
         .about-image-carousel.active {
@@ -477,6 +376,7 @@
             height: 100%;
             object-fit: cover;
             border-radius: 50%;
+            display: block;
         }
         
         .about-content h3 { 
@@ -523,7 +423,7 @@
             margin-bottom: 0.3rem; 
         }
 
-        /* ==================== PAYMENT PLAN ==================== */
+        /* PAYMENT PLAN */
         #plan-pagos { 
             padding: 5rem 2rem; 
             background: var(--color-light); 
@@ -566,7 +466,7 @@
             background: var(--color-light); 
         }
 
-        /* ==================== PROJECT SECTION ==================== */
+        /* PROJECT SECTION */
         .proyecto { 
             padding: 4rem 2rem; 
             max-width: 1400px; 
@@ -587,7 +487,6 @@
             font-family: var(--font-primary); 
             color: var(--color-dark); 
             margin-bottom: 1rem; 
-            letter-spacing: -1px; 
         }
         
         .proyecto-content h2 .highlight { 
@@ -700,15 +599,10 @@
             background: var(--color-secondary); 
         }
         
-        .carousel-nav.prev { 
-            left: 10px; 
-        }
-        
-        .carousel-nav.next { 
-            right: 10px; 
-        }
+        .carousel-nav.prev { left: 10px; }
+        .carousel-nav.next { right: 10px; }
 
-        /* ==================== FEATURED PROJECTS ==================== */
+        /* FEATURED PROJECTS */
         .proyectos-destacados { 
             padding: 4rem 2rem; 
             background: var(--color-light); 
@@ -779,7 +673,7 @@
             opacity: 0.9; 
         }
 
-        /* ==================== WHY SINERGIA ==================== */
+        /* WHY SINERGIA */
         #por-que { 
             padding: 5rem 2rem; 
             background: white; 
@@ -819,7 +713,7 @@
             line-height: 1.8; 
         }
 
-        /* ==================== CONTACT SECTION ==================== */
+        /* CONTACT */
         .contact { 
             padding: 4rem 2rem; 
             background: white; 
@@ -945,7 +839,7 @@
             border: none; 
         }
 
-        /* ==================== WHATSAPP BUTTON ==================== */
+        /* WHATSAPP BUTTON */
         .whatsapp-btn { 
             position: fixed; 
             bottom: 30px; 
@@ -975,7 +869,7 @@
             box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4); 
         }
 
-        /* ==================== FOOTER ==================== */
+        /* FOOTER */
         footer { 
             background: var(--color-dark); 
             color: white; 
@@ -1022,43 +916,27 @@
             opacity: 0.8; 
         }
 
-        /* ==================== FADE-IN ANIMATION ==================== */
-        .fade-in { 
-            opacity: 0; 
-        }
-        
-        .fade-in.visible { 
-            animation: fadeInUp 0.8s ease-out forwards; 
-        }
-        
+        /* FADE-IN */
+        .fade-in { opacity: 0; }
+        .fade-in.visible { animation: fadeInUp 0.8s ease-out forwards; }
         @keyframes fadeInUp { 
             from { opacity: 0; transform: translateY(30px); } 
             to { opacity: 1; transform: translateY(0); } 
         }
 
-        /* ==================== RESPONSIVE ==================== */
+        /* RESPONSIVE */
         @media (max-width: 1024px) {
-            .proyecto-grid { 
-                grid-template-columns: 1fr; 
-            }
-            .contact-container { 
-                grid-template-columns: 1fr; 
-            }
-            .about-container { 
-                grid-template-columns: 1fr; 
-            }
-            .nav-menu { 
-                gap: 1.5rem; 
-            }
+            .proyecto-grid { grid-template-columns: 1fr; }
+            .contact-container { grid-template-columns: 1fr; }
+            .about-container { grid-template-columns: 1fr; }
+            .nav-menu { gap: 1.5rem; }
         }
 
         @media (max-width: 768px) {
             .nav-menu { 
                 display: none; 
                 position: fixed; 
-                top: 60px; 
-                left: 0; 
-                right: 0; 
+                top: 60px; left: 0; right: 0;
                 flex-direction: column; 
                 gap: 0; 
                 background: white; 
@@ -1067,51 +945,29 @@
                 max-height: calc(100vh - 60px); 
                 overflow-y: auto; 
             }
-            .nav-menu.active { 
-                display: flex; 
-            }
+            .nav-menu.active { display: flex; }
             .nav-menu a { 
                 padding: 0.8rem 0; 
                 border-bottom: 1px solid #f0f0f0; 
             }
-            .hamburger { 
-                display: flex; 
-            }
+            .hamburger { display: flex; }
             .hero { 
                 margin-top: 50px; 
                 height: 70vh; 
             }
-            .hero-content h1 { 
-                font-size: 1.8rem; 
-            }
-            .hero-content p { 
-                font-size: 1rem; 
-            }
-            .proyecto-grid { 
-                grid-template-columns: 1fr; 
-            }
-            .proyecto-carousel { 
-                aspect-ratio: 1; 
-            }
-            .proyectos-grid { 
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-            }
-            .contact-container { 
-                grid-template-columns: 1fr; 
-            }
-            .about-container { 
-                grid-template-columns: 1fr; 
-            }
+            .hero-content h1 { font-size: 1.8rem; }
+            .hero-content p { font-size: 1rem; }
+            .proyecto-grid { grid-template-columns: 1fr; }
+            .proyecto-carousel { aspect-ratio: 1; }
+            .proyectos-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+            .contact-container { grid-template-columns: 1fr; }
+            .about-container { grid-template-columns: 1fr; }
             .about-image-circle { 
                 width: 250px; 
                 height: 250px; 
             }
-            .values-grid { 
-                grid-template-columns: 1fr; 
-            }
-            .map-container { 
-                height: 300px; 
-            }
+            .values-grid { grid-template-columns: 1fr; }
+            .map-container { height: 300px; }
             .whatsapp-btn { 
                 bottom: 20px; 
                 right: 20px; 
@@ -1122,22 +978,14 @@
         }
 
         @media (max-width: 480px) {
-            .hero-content h1 { 
-                font-size: 1.4rem; 
-            }
-            .hero-content p { 
-                font-size: 0.9rem; 
-            }
+            .hero-content h1 { font-size: 1.4rem; }
+            .hero-content p { font-size: 0.9rem; }
             .hero-cta { 
                 padding: 0.8rem 1.8rem; 
                 font-size: 0.9rem; 
             }
-            .section-title { 
-                font-size: 1.5rem; 
-            }
-            .proyectos-grid { 
-                grid-template-columns: 1fr; 
-            }
+            .section-title { font-size: 1.5rem; }
+            .proyectos-grid { grid-template-columns: 1fr; }
             .carousel-nav { 
                 width: 40px; 
                 height: 40px; 
@@ -1150,9 +998,7 @@
                 height: 50px; 
                 font-size: 1.3rem; 
             }
-            .map-container { 
-                height: 250px; 
-            }
+            .map-container { height: 250px; }
             .about-image-circle { 
                 width: 200px; 
                 height: 200px; 
@@ -1161,35 +1007,28 @@
     </style>
 </head>
 <body>
-   
-<!-- ==================== SPLASH SCREEN ==================== -->
+
+<!-- SPLASH SCREEN -->
 <div class="splash-screen">
     <div class="splash-content">
         <div class="splash-logo">
-            <!-- SVG Casa ARREGLADO -->
             <svg class="splash-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
                 <path d="M50 10 L90 40 L90 90 L10 90 L10 40 Z" stroke="#ffffff" stroke-width="3" fill="none" stroke-linejoin="round"/>
                 <path d="M50 10 L30 30 M50 10 L70 30" stroke="#FC9E07" stroke-width="2" stroke-linecap="round"/>
                 <path d="M35 60 L35 90 M65 60 L65 90 M35 70 L65 70" stroke="#ffffff" stroke-width="2"/>
                 <rect x="40" y="50" width="20" height="15" stroke="#FC9E07" stroke-width="2" fill="none"/>
             </svg>
-
-            <img 
-                src="https://i.pinimg.com/736x/80/e3/dc/80e3dcf22e2f5554d6e107b95739f7fa.jpg" 
-                alt="Sinergia Constructora Isologo" 
-                class="splash-isologo"
-            >
-            
+            <img src="https://i.pinimg.com/736x/80/e3/dc/80e3dcf22e2f5554d6e107b95739f7fa.jpg" alt="Sinergia Isologo" class="splash-isologo">
             <p class="splash-text">Desarrollos inmobiliarios inteligentes en el corazón del NOA</p>
         </div>
     </div>
 </div>
 
-<!-- ==================== HEADER & NAVIGATION ==================== -->
+<!-- HEADER -->
 <header>
     <nav>
         <a href="#inicio" class="logo">
-            <img src="https://i.pinimg.com/736x/80/e3/dc/80e3dcf22e2f5554d6e107b95739f7fa.jpg" alt="Logo SINERGIA" class="logo-img">
+            <img src="https://i.pinimg.com/736x/80/e3/dc/80e3dcf22e2f5554d6e107b95739f7fa.jpg" alt="Logo" class="logo-img">
         </a>
         <ul class="nav-menu">
             <li><a href="#inicio" class="nav-link active">Inicio</a></li>
@@ -1208,7 +1047,7 @@
     </nav>
 </header>
 
-<!-- ==================== HERO SECTION ==================== -->
+<!-- HERO -->
 <section id="inicio" class="hero">
     <div class="hero-carousel">
         <div class="hero-slide hero-slide-1 active"></div>
@@ -1222,21 +1061,21 @@
     </div>
 </section>
 
-<!-- ==================== ABOUT SECTION ==================== -->
+<!-- ABOUT -->
 <section id="sobre-nosotros">
     <div class="container">
         <h2 class="section-title">Sobre <span>Sinergia</span></h2>
         <div class="about-container fade-in">
             <div class="about-image-wrapper">
                 <div class="about-image-circle">
-                    <div class="about-image-carousel active" id="carousel-1">
-                        <img src="https://i.pinimg.com/736x/62/ec/93/62ec935317ff7672b6cf363ce8d54dbe.jpg" alt="Imagen Sinergia 1">
+                    <div class="about-image-carousel active">
+                        <img src="https://i.pinimg.com/736x/62/ec/93/62ec935317ff7672b6cf363ce8d54dbe.jpg" alt="Imagen 1">
                     </div>
-                    <div class="about-image-carousel" id="carousel-2">
-                        <img src="https://i.pinimg.com/736x/7b/cf/19/7bcf194f406469fbd6881a27f851a9c4.jpg" alt="Imagen Sinergia 2">
+                    <div class="about-image-carousel">
+                        <img src="https://i.pinimg.com/736x/7b/cf/19/7bcf194f406469fbd6881a27f851a9c4.jpg" alt="Imagen 2">
                     </div>
-                    <div class="about-image-carousel" id="carousel-3">
-                        <img src="https://i.pinimg.com/736x/e1/d1/39/e1d1390df5ce9aa4462a762266d51507.jpg" alt="Imagen Sinergia 3">
+                    <div class="about-image-carousel">
+                        <img src="https://i.pinimg.com/736x/e1/d1/39/e1d1390df5ce9aa4462a762266d51507.jpg" alt="Imagen 3">
                     </div>
                 </div>
             </div>
@@ -1280,7 +1119,7 @@
     </div>
 </section>
 
-<!-- ==================== PAYMENT PLAN ==================== -->
+<!-- PAYMENT PLAN -->
 <section id="plan-pagos">
     <div class="container">
         <h2 class="section-title">Plan de <span>Pagos</span></h2>
@@ -1303,115 +1142,106 @@
                     <tr>
                         <td><strong>2. Estructura</strong></td>
                         <td>20%</td>
-                        <td>Completada cimentación y compra principal (Obra Gruesa)</td>
+                        <td>Completada cimentación y compra principal</td>
                     </tr>
                     <tr>
                         <td><strong>3. Cerramiento</strong></td>
                         <td>15%</td>
-                        <td>Terminados muros, techo e instalaciones primarias (Obra Gris)</td>
+                        <td>Terminados muros, techo e instalaciones primarias</td>
                     </tr>
                     <tr>
                         <td><strong>4. Acabados</strong></td>
                         <td>10%</td>
-                        <td>Finalizados pisos, carpinterías, pinturas e instalación de artefactos</td>
+                        <td>Finalizados pisos, carpinterías y pinturas</td>
                     </tr>
                     <tr>
                         <td><strong>5. Entrega Final</strong></td>
                         <td>5%</td>
-                        <td>Recepción de obra por cliente y entrega de llaves</td>
+                        <td>Recepción de obra y entrega de llaves</td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div style="text-align: center; margin-top: 2rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
             <p style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); color: white; padding: 1.5rem; border-radius: 10px; font-weight: 600;">
-                💰 Financiación disponible: hasta 20% en 12 cuotas actualizables al índice CAC
+                💰 Financiación disponible: hasta 20% en 12 cuotas
             </p>
         </div>
     </div>
 </section>
 
-<!-- ==================== PROJECT SECTION ==================== -->
+<!-- PROJECT -->
 <section id="proyecto" class="proyecto">
     <div class="proyecto-grid">
         <div class="proyecto-content fade-in">
             <h2>Proyecto en <span class="highlight">Venta</span></h2>
-            <p><strong>EKO Distrito</strong> es el resultado de años de investigación en diseño sostenible y construcción de excelencia. Dos unidades de vivienda en dúplex, pensadas para familias que valoran el espacio, la luz natural y la conectividad con su entorno.</p>
-
-            <p>Cada unidad ofrece dos plantas bien distribuidas, con amplios espacios comunes, orientación que maximiza la iluminación solar, y acceso a servicios de primera calidad. No es solo un lugar para vivir; es un espacio donde la vida fluye con propósito.</p>
-
+            <p><strong>EKO Distrito</strong> es el resultado de años de investigación en diseño sostenible y construcción de excelencia. Dos unidades de vivienda en dúplex, pensadas para familias que valoran el espacio, la luz natural y la conectividad.</p>
+            <p>Cada unidad ofrece dos plantas bien distribuidas, con amplios espacios comunes, orientación que maximiza la iluminación solar, y acceso a servicios de primera calidad.</p>
             <div class="proyecto-features">
                 <span class="feature-tag">✓ Diseño moderno</span>
                 <span class="feature-tag">✓ Área premium</span>
                 <span class="feature-tag">✓ Listo para vivir</span>
                 <span class="feature-tag">✓ Oportunidad de inversión</span>
             </div>
-
             <p style="font-weight: 600; color: var(--color-primary); font-size: 1.1rem; margin-top: 2rem;">Contactanos para conocer los detalles y disponibilidad →</p>
         </div>
 
         <div class="proyecto-carousel">
             <div class="carousel-slide active">
-                <img src="https://i.pinimg.com/736x/e4/69/52/e4695224551f1eff67f530072f99c217.jpg" alt="Interior proyecto EKO Distrito">
+                <img src="https://i.pinimg.com/736x/e4/69/52/e4695224551f1eff67f530072f99c217.jpg" alt="Interior">
             </div>
             <div class="carousel-slide">
-                <img src="https://i.pinimg.com/736x/5a/07/fc/5a07fcd1bba65ee56c38d814c7250532.jpg" alt="Dormitorio proyecto EKO Distrito">
+                <img src="https://i.pinimg.com/736x/5a/07/fc/5a07fcd1bba65ee56c38d814c7250532.jpg" alt="Dormitorio">
             </div>
             <div class="carousel-slide">
-                <img src="https://i.pinimg.com/736x/42/92/0c/42920c0c0d9e874d3a84166aa9737659.jpg" alt="Exterior proyecto EKO Distrito">
+                <img src="https://i.pinimg.com/736x/42/92/0c/42920c0c0d9e874d3a84166aa9737659.jpg" alt="Exterior">
             </div>
-
             <div class="carousel-controls">
                 <div class="carousel-dot active" data-slide="0"></div>
                 <div class="carousel-dot" data-slide="1"></div>
                 <div class="carousel-dot" data-slide="2"></div>
             </div>
-
             <button class="carousel-nav prev">❮</button>
             <button class="carousel-nav next">❯</button>
         </div>
     </div>
 </section>
 
-<!-- ==================== FEATURED PROJECTS ==================== -->
+<!-- FEATURED PROJECTS -->
 <section id="destacados" class="proyectos-destacados">
     <div class="proyectos-destacados-container">
         <h2 class="section-title">Proyectos <span>Destacados</span></h2>
         <div class="proyectos-grid">
             <div class="proyecto-card fade-in">
-                <img src="https://i.pinimg.com/736x/99/6b/23/996b23d4a03f17c968633eaf2917ceeb.jpg" alt="Residencial Andino">
+                <img src="https://i.pinimg.com/736x/99/6b/23/996b23d4a03f17c968633eaf2917ceeb.jpg" alt="Residencial">
                 <div class="proyecto-card-overlay">
                     <div class="proyecto-card-title">Residencial Andino</div>
                     <div class="proyecto-card-desc">Complejo residencial con vista a la Cordillera</div>
                 </div>
             </div>
-
             <div class="proyecto-card fade-in">
-                <img src="https://i.pinimg.com/736x/d3/3f/57/d33f572bdd25c39a53ababc75b886cc0.jpg" alt="PH Urbano Sur">
+                <img src="https://i.pinimg.com/736x/d3/3f/57/d33f572bdd25c39a53ababc75b886cc0.jpg" alt="PH">
                 <div class="proyecto-card-overlay">
                     <div class="proyecto-card-title">PH Urbano Sur</div>
                     <div class="proyecto-card-desc">Penthouse de lujo en zona céntrica</div>
                 </div>
             </div>
-
             <div class="proyecto-card fade-in">
-                <img src="https://i.pinimg.com/736x/fa/3d/0e/fa3d0e8f8c5e386b18169a50ea58dde8.jpg" alt="Lofts Contemporáneos">
+                <img src="https://i.pinimg.com/736x/fa/3d/0e/fa3d0e8f8c5e386b18169a50ea58dde8.jpg" alt="Lofts">
                 <div class="proyecto-card-overlay">
                     <div class="proyecto-card-title">Lofts Contemporáneos</div>
                     <div class="proyecto-card-desc">Espacios abiertos con estilo industrial</div>
                 </div>
             </div>
-
             <div class="proyecto-card fade-in">
-                <img src="https://i.pinimg.com/736x/90/52/d0/9052d02125f1cbec4fa2bfc81f460849.jpg" alt="Vivienda Sustentable">
+                <img src="https://i.pinimg.com/736x/90/52/d0/9052d02125f1cbec4fa2bfc81f460849.jpg" alt="Sustentable">
                 <div class="proyecto-card-overlay">
                     <div class="proyecto-card-title">Vivienda Sustentable</div>
-                    <div class="proyecto-card-desc">Construcción eco-amigable con energía renovable</div>
+                    <div class="proyecto-card-desc">Construcción eco-amigable</div>
                 </div>
             </div>
-
             <div class="proyecto-card fade-in">
-                <img src="https://i.pinimg.com/736x/a8/26/b5/a826b5964d4e76fd689820e92da2b42c.jpg" alt="Complejo Residencial">
+                <img src="https://i.pinimg.com/736x/a8/26/b5/a826b5964d4e76fd689820e92da2b42c.jpg" alt="Complejo">
                 <div class="proyecto-card-overlay">
                     <div class="proyecto-card-title">Complejo Residencial</div>
                     <div class="proyecto-card-desc">Comunidad integrada con servicios premium</div>
@@ -1421,7 +1251,7 @@
     </div>
 </section>
 
-<!-- ==================== WHY SINERGIA ==================== -->
+<!-- WHY SINERGIA -->
 <section id="por-que">
     <div class="container">
         <h2 class="section-title">¿Por Qué <span>Sinergia?</span></h2>
@@ -1429,37 +1259,36 @@
         <div class="why-grid">
             <div class="why-card fade-in">
                 <h3>🔗 Integración Estratégica</h3>
-                <p><strong>Conectamos cadena de suministro con ejecución.</strong> Garantizamos los más altos estándares de calidad y los plazos comprometidos. <strong>No es solo construcción — es sincronización perfecta.</strong></p>
+                <p>Conectamos cadena de suministro con ejecución. Garantizamos calidad y plazos comprometidos.</p>
             </div>
             <div class="why-card fade-in">
                 <h3>✨ Calidad de Resultado</h3>
-                <p>Nos obsesionamos con el detalle. <strong>Creamos activos que aumentan su valor con el tiempo,</strong> desde solidez estructural hasta calidez de terminaciones.</p>
+                <p>Nos obsesionamos con el detalle. Creamos activos que aumentan su valor con el tiempo.</p>
             </div>
             <div class="why-card fade-in">
                 <h3>🛡️ Seguridad y Confianza</h3>
-                <p>La confianza es nuestro principal activo. Somos la opción más <strong>segura y transparente</strong> porque tu inversión es importante — <strong>merece claridad absoluta.</strong></p>
+                <p>La confianza es nuestro principal activo. Tu inversión merece claridad absoluta.</p>
             </div>
             <div class="why-card fade-in">
                 <h3>💡 Innovación en Valor</h3>
-                <p>No solo construimos, <strong>optimizamos inteligentemente.</strong> El resultado final es estético e <strong>inteligente — tu inversión trabajará para ti.</strong></p>
+                <p>Optimizamos inteligentemente. Tu inversión trabajará para ti.</p>
             </div>
             <div class="why-card fade-in">
                 <h3>🏆 Maestría Técnica</h3>
-                <p><strong>10+ años de experiencia</strong> supervisión técnica rigurosa. Cada metro ejecutado bajo los <strong>más altos estándares.</strong></p>
+                <p>10+ años de experiencia. Supervisión técnica rigurosa en cada proyecto.</p>
             </div>
             <div class="why-card fade-in">
                 <h3>🤝 Tu Socio Estratégico</h3>
-                <p>Transparencia, cercanía, profesionalismo. <strong>Tu éxito es nuestro éxito.</strong></p>
+                <p>Transparencia, cercanía, profesionalismo. Tu éxito es nuestro éxito.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ==================== CONTACT SECTION ==================== -->
+<!-- CONTACT -->
 <section id="contacto" class="contact">
     <div class="contact-container">
         <h2>Ponte en Contacto</h2>
-
         <div class="contact-info fade-in">
             <div class="contact-item">
                 <div class="contact-icon">📍</div>
@@ -1468,7 +1297,6 @@
                     <p>Zona Sur, Salta, Argentina</p>
                 </div>
             </div>
-
             <div class="contact-item">
                 <div class="contact-icon">📞</div>
                 <div class="contact-details">
@@ -1476,7 +1304,6 @@
                     <p><a href="tel:+5493872233151">+54 9 387 2233151</a></p>
                 </div>
             </div>
-
             <div class="contact-item">
                 <div class="contact-icon">✉️</div>
                 <div class="contact-details">
@@ -1484,16 +1311,14 @@
                     <p><a href="mailto:info@sinergiadesarrolladora.com">info@sinergiadesarrolladora.com</a></p>
                 </div>
             </div>
-
             <div class="contact-item">
                 <div class="contact-icon">💬</div>
                 <div class="contact-details">
-                    <h4>WhatsApp Business</h4>
-                    <p><a href="https://wa.me/5493872233151?text=Hola%20Sinergia" target="_blank">+54 9 387 2233151</a></p>
+                    <h4>WhatsApp</h4>
+                    <p><a href="https://wa.me/5493872233151" target="_blank">+54 9 387 2233151</a></p>
                 </div>
             </div>
         </div>
-
         <div class="fade-in">
             <h3 style="color: var(--color-secondary); margin-bottom: 2rem; font-family: var(--font-primary); font-weight: 700;">Envíanos tu Consulta</h3>
             <form id="contactForm">
@@ -1501,46 +1326,40 @@
                     <label for="nombre">Nombre Completo</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
                 </div>
-
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="tu@email.com" required>
                 </div>
-
                 <div class="form-group">
                     <label for="telefono">Teléfono</label>
                     <input type="tel" id="telefono" name="telefono" placeholder="+54 9 387 XXXXXXX">
                 </div>
-
                 <div class="form-group">
                     <label for="asunto">Asunto</label>
                     <input type="text" id="asunto" name="asunto" placeholder="¿En qué podemos ayudarte?" required>
                 </div>
-
                 <div class="form-group">
                     <label for="mensaje">Mensaje</label>
                     <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos detalles de tu consulta..." required></textarea>
                 </div>
-
                 <button type="submit" class="btn btn-primary">Enviar Consulta</button>
             </form>
         </div>
     </div>
-
     <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3575.7822894356374!2d-65.41190332346044!3d-24.782135277502286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b3fbab3bbbbbb%3A0x8b3b3b3b3b3b3b3b!2sZona%20Sur%2C%20Salta!5e0!3m2!1ses!2sar!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3575.78!2d-65.41!3d-24.78!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b3fba%3A0x0!2sZona%20Sur%2C%20Salta!5e0!3m2!1ses!2sar!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
     </div>
 </section>
 
-<!-- ==================== WHATSAPP BUTTON ==================== -->
-<a href="https://wa.me/5493872233151?text=Hola%20Sinergia%2C%20me%20interesa%20saber%20m%C3%A1s" class="whatsapp-btn" target="_blank">💬</a>
+<!-- WHATSAPP -->
+<a href="https://wa.me/5493872233151?text=Hola%20Sinergia" class="whatsapp-btn" target="_blank">💬</a>
 
-<!-- ==================== FOOTER ==================== -->
+<!-- FOOTER -->
 <footer>
     <div class="footer-content">
         <div class="footer-section">
             <h4>Sinergia Desarrolladora</h4>
-            <p>Desarrolladora inmobiliaria comprometida con excelencia, innovación y sostenibilidad. Creamos espacios donde la vida fluye con propósito.</p>
+            <p>Desarrolladora inmobiliaria comprometida con excelencia, innovación y sostenibilidad.</p>
         </div>
         <div class="footer-section">
             <h4>Enlaces Rápidos</h4>
@@ -1552,124 +1371,107 @@
             <a href="#contacto">Contacto</a>
         </div>
         <div class="footer-section">
-            <h4>Contacto Directo</h4>
+            <h4>Contacto</h4>
             <a href="tel:+5493872233151">📞 +54 9 387 2233151</a>
-            <a href="mailto:info@sinergiadesarrolladora.com">✉️ info@sinergiadesarrolladora.com</a>
+            <a href="mailto:info@sinergiadesarrolladora.com">✉️ Email</a>
             <a href="https://wa.me/5493872233151" target="_blank">💬 WhatsApp</a>
         </div>
     </div>
     <div class="footer-bottom">
         <p>&copy; 2024 Sinergia Inmobiliaria. Todos los derechos reservados.</p>
-        <p style="margin-top: 1rem; font-size: 0.9rem;">Salta, Argentina - Desarrolladora Inmobiliaria Nº1</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">Salta, Argentina</p>
     </div>
 </footer>
 
 <script>
-    // ==================== HEADER DINÁMICO ====================
     let lastScrollTop = 0;
     const header = document.querySelector('header');
-    let isScrolling = false;
 
     window.addEventListener('scroll', () => {
-        let scrollTop = window.scrollY || document.documentElement.scrollTop;
-        
-        if (!isScrolling) {
-            isScrolling = true;
-            
-            if (scrollTop < lastScrollTop) {
-                header.classList.remove('hidden');
-            } 
-            else if (scrollTop > lastScrollTop && scrollTop > 500) {
-                header.classList.add('hidden');
-            }
-            
-            lastScrollTop = scrollTop;
-            
-            if (scrollTop > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
+        let scrollTop = window.scrollY;
+        if (scrollTop < lastScrollTop) {
+            header.classList.remove('hidden');
+        } else if (scrollTop > lastScrollTop && scrollTop > 500) {
+            header.classList.add('hidden');
         }
-        
-        setTimeout(() => {
-            isScrolling = false;
-        }, 100);
-    }, false);
+        lastScrollTop = scrollTop;
+        if (scrollTop > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
 
-    // Logo clickeable al inicio
     document.querySelector('.logo').addEventListener('click', (e) => {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
         header.classList.remove('hidden');
     });
 
-    // ==================== HERO CAROUSEL ====================
-    let heroSlideIndex = 0;
+    // Hero slides
+    let heroIndex = 0;
     const heroSlides = document.querySelectorAll('.hero-slide');
-    function rotateHeroSlide() {
-        heroSlides.forEach(slide => slide.classList.remove('active'));
-        heroSlides[heroSlideIndex].classList.add('active');
-        heroSlideIndex = (heroSlideIndex + 1) % heroSlides.length;
-        setTimeout(rotateHeroSlide, 4000);
+    function rotateHero() {
+        heroSlides.forEach(s => s.classList.remove('active'));
+        heroSlides[heroIndex].classList.add('active');
+        heroIndex = (heroIndex + 1) % heroSlides.length;
+        setTimeout(rotateHero, 4000);
     }
-    rotateHeroSlide();
+    rotateHero();
 
-    // ==================== PROJECT CAROUSEL ====================
+    // Project carousel
     let carouselIndex = 0;
-    const carouselSlides = document.querySelectorAll('.carousel-slide');
-    const carouselDots = document.querySelectorAll('.carousel-dot');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
     
-    function showCarouselSlide(index) {
-        carouselSlides.forEach(slide => slide.classList.remove('active'));
-        carouselDots.forEach(dot => dot.classList.remove('active'));
-        carouselSlides[index].classList.add('active');
-        carouselDots[index].classList.add('active');
+    function showSlide(i) {
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        slides[i].classList.add('active');
+        dots[i].classList.add('active');
     }
     
     document.querySelectorAll('.carousel-nav.prev').forEach(btn => {
         btn.addEventListener('click', () => {
-            carouselIndex = (carouselIndex - 1 + carouselSlides.length) % carouselSlides.length;
-            showCarouselSlide(carouselIndex);
+            carouselIndex = (carouselIndex - 1 + slides.length) % slides.length;
+            showSlide(carouselIndex);
         });
     });
     
     document.querySelectorAll('.carousel-nav.next').forEach(btn => {
         btn.addEventListener('click', () => {
-            carouselIndex = (carouselIndex + 1) % carouselSlides.length;
-            showCarouselSlide(carouselIndex);
+            carouselIndex = (carouselIndex + 1) % slides.length;
+            showSlide(carouselIndex);
         });
     });
     
-    carouselDots.forEach((dot, index) => {
+    dots.forEach((dot, i) => {
         dot.addEventListener('click', () => {
-            carouselIndex = index;
-            showCarouselSlide(carouselIndex);
+            carouselIndex = i;
+            showSlide(i);
         });
     });
 
-    // ==================== ABOUT IMAGE CAROUSEL ====================
+    // About carousel
     const aboutCarousels = document.querySelectorAll('.about-image-carousel');
-    let currentCarouselIndex = 0;
+    let currentIndex = 0;
     
-    function rotateAboutImages() {
-        aboutCarousels.forEach(carousel => carousel.classList.remove('active'));
-        currentCarouselIndex = (currentCarouselIndex + 1) % aboutCarousels.length;
-        aboutCarousels[currentCarouselIndex].classList.add('active');
-        setTimeout(rotateAboutImages, 8000);
+    function rotateAbout() {
+        aboutCarousels.forEach(c => c.classList.remove('active'));
+        currentIndex = (currentIndex + 1) % aboutCarousels.length;
+        aboutCarousels[currentIndex].classList.add('active');
+        setTimeout(rotateAbout, 8000);
     }
-    
-    setTimeout(rotateAboutImages, 8000);
+    setTimeout(rotateAbout, 8000);
 
-    // ==================== ACTIVE NAV LINKS ====================
+    // Nav links
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section');
     
     window.addEventListener('scroll', () => {
         let current = '';
         sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (pageYOffset >= sectionTop - 200) {
+            if (window.pageYOffset >= section.offsetTop - 200) {
                 current = section.getAttribute('id');
             }
         });
@@ -1681,11 +1483,11 @@
         });
     });
 
-    // ==================== HAMBURGER MENU ====================
+    // Hamburger
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     
-    hamburger?.addEventListener('click', () => {
+    hamburger.addEventListener('click', () => {
         navMenu.classList.toggle('active');
         hamburger.classList.toggle('active');
     });
@@ -1697,8 +1499,7 @@
         });
     });
 
-    // ==================== INTERSECTION OBSERVER (FADE-IN) ====================
-    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -100px 0px' };
+    // Fade-in
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -1706,32 +1507,30 @@
                 observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1 });
     
     document.querySelectorAll('.fade-in').forEach(el => {
         observer.observe(el);
     });
 
-    // ==================== CONTACT FORM ====================
-    const contactForm = document.getElementById('contactForm');
-    const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    
-    contactForm?.addEventListener('submit', (e) => {
+    // Form
+    const form = document.getElementById('contactForm');
+    form?.addEventListener('submit', (e) => {
         e.preventDefault();
         const nombre = document.getElementById('nombre').value.trim();
         const email = document.getElementById('email').value.trim();
-        if (!nombre || !validateEmail(email)) {
+        if (!nombre || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             alert('Por favor completa los campos correctamente');
             return;
         }
         alert('¡Gracias! Nos contactaremos pronto.');
-        contactForm.reset();
+        form.reset();
     });
 
-    // ==================== SMOOTH SCROLL ====================
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
+        anchor.addEventListener('click', (e) => {
+            const href = anchor.getAttribute('href');
             if (href !== '#' && document.querySelector(href)) {
                 e.preventDefault();
                 document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
