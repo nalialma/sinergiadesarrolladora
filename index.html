@@ -62,13 +62,13 @@
         .splash-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); display: flex; justify-content: center; align-items: center; z-index: 9999; animation: fadeOutScreen 0.8s ease-in-out 3.5s forwards; }
         @keyframes fadeOutScreen { to { opacity: 0; visibility: hidden; } }
         .splash-content { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2rem; position: relative; z-index: 2; text-align: center; }
-        .splash-logo { width: clamp(200px, 50vw, 280px); display: flex; align-items: center; justify-content: center; gap: 1.5rem; opacity: 0; animation: fadeInLogo 0.8s ease-out 0.2s forwards; }
+        .splash-logo { width: clamp(200px, 50vw, 320px); display: flex; align-items: center; justify-content: center; gap: 1.5rem; opacity: 0; animation: fadeInLogo 0.8s ease-out 1.8s forwards; }
         @keyframes fadeInLogo { from { opacity: 0; } to { opacity: 1; } }
-        .splash-svg { width: clamp(60px, 12vw, 100px); height: clamp(60px, 12vw, 100px); opacity: 0; animation: scaleIn 0.6s ease-out forwards; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2)); }
-        .splash-svg.house { animation-delay: 0.4s; }
-        .splash-svg.helmet { animation-delay: 1.4s; }
-        @keyframes scaleIn { from { opacity: 0; transform: scale(0) rotate(-45deg); } to { opacity: 1; transform: scale(1) rotate(0deg); } }
-        .splash-text { width: clamp(200px, 60vw, 320px); height: auto; background: url('https://i.pinimg.com/736x/68/ec/50/68ec50ec5dc494fcaa2ee987806abdd1.jpg') center/contain no-repeat; opacity: 0; animation: fadeInText 0.8s ease-out 2.8s forwards; aspect-ratio: 4/1; }
+        .splash-svg { width: clamp(80px, 15vw, 150px); height: clamp(80px, 15vw, 150px); opacity: 0; animation: scaleInHouse 0.8s ease-out forwards, scaleOutHouse 0.8s ease-out 1.5s forwards; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2)); }
+        .splash-svg.house { animation-delay: 0.3s; }
+        @keyframes scaleInHouse { from { opacity: 0; transform: scale(0) rotate(-45deg); } to { opacity: 1; transform: scale(1) rotate(0deg); } }
+        @keyframes scaleOutHouse { from { opacity: 1; transform: scale(1) rotate(0deg); } to { opacity: 0; transform: scale(0) rotate(45deg); } }
+        .splash-text { width: clamp(220px, 65vw, 380px); height: auto; background: url('https://i.pinimg.com/736x/e1/d1/39/e1d1390df5ce9aa4462a762266d51507.jpg') center/contain no-repeat; opacity: 0; animation: fadeInText 0.8s ease-out 2.8s forwards; aspect-ratio: 1/1; }
         @keyframes fadeInText { to { opacity: 1; } }
 
         /* HERO */
@@ -170,24 +170,43 @@
         td { padding: 1.2rem 1.5rem; border-bottom: 1px solid #eee; }
         tbody tr:hover { background: var(--color-light); }
 
-        #mision { padding: 4rem 2rem; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); color: white; }
-        #mision > div { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
-        #mision h2 { font-size: 2rem; margin-bottom: 1.5rem; font-family: var(--font-primary); font-weight: 900; }
-        #mision span { color: var(--color-secondary-light); }
-        #mision p { font-size: 1rem; line-height: 1.9; margin-bottom: 1rem; opacity: 0.95; }
-
-        #testimonios { padding: 5rem 2rem; background: var(--color-light); }
-        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
-        .testimonial-card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: all 0.3s ease; border-left: 5px solid var(--color-secondary); }
-        .testimonial-card:hover { transform: translateY(-5px); }
-        .stars { color: var(--color-secondary); font-size: 1.2rem; margin-bottom: 1rem; }
-        .testimonial-text { color: #666; margin-bottom: 1.5rem; line-height: 1.8; font-style: italic; }
-        .testimonial-author { font-family: var(--font-primary); font-weight: 700; color: var(--color-dark); }
-        .testimonial-role { color: var(--color-primary); font-size: 0.9rem; }
-
+        /* SOBRE NOSOTROS */
         #sobre-nosotros { padding: 5rem 2rem; background: white; }
         .about-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
-        .about-image { width: 100%; height: 400px; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 5rem; color: rgba(255,255,255,0.2); }
+        .about-image-wrapper { position: relative; display: flex; align-items: center; justify-content: center; }
+        .about-image-circle { 
+            width: 300px; 
+            height: 300px; 
+            border-radius: 50%; 
+            overflow: hidden; 
+            box-shadow: 0 20px 60px rgba(85, 162, 3, 0.2);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .about-image-carousel { 
+            width: 100%; 
+            height: 100%; 
+            border-radius: 50%;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            animation: rotateImage 15s linear infinite;
+        }
+        .about-image-carousel.active {
+            opacity: 1;
+        }
+        @keyframes rotateImage {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .about-image-carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
         .about-content h3 { font-size: 1.8rem; color: var(--color-primary); margin-bottom: 1rem; font-family: var(--font-primary); }
         .about-content p { color: #666; margin-bottom: 1.5rem; line-height: 1.8; }
         .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
@@ -206,7 +225,6 @@
         @media (max-width: 1024px) {
             .proyecto-grid { grid-template-columns: 1fr; }
             .contact-container { grid-template-columns: 1fr; }
-            #mision > div { grid-template-columns: 1fr; }
             .about-container { grid-template-columns: 1fr; }
             .nav-menu { gap: 1.5rem; }
         }
@@ -224,7 +242,7 @@
             .proyectos-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
             .contact-container { grid-template-columns: 1fr; }
             .about-container { grid-template-columns: 1fr; }
-            .about-image { height: 300px; }
+            .about-image-circle { width: 250px; height: 250px; }
             .values-grid { grid-template-columns: 1fr; }
             .map-container { height: 300px; }
             .whatsapp-btn { bottom: 20px; right: 20px; width: 55px; height: 55px; font-size: 1.5rem; }
@@ -239,6 +257,7 @@
             .carousel-nav { width: 40px; height: 40px; font-size: 1.2rem; }
             .whatsapp-btn { bottom: 15px; right: 15px; width: 50px; height: 50px; font-size: 1.3rem; }
             .map-container { height: 250px; }
+            .about-image-circle { width: 200px; height: 200px; }
         }
     </style>
 </head>
@@ -252,14 +271,6 @@
                 <path d="M50 10 L30 30 M50 10 L70 30" stroke="#F8EF0C" stroke-width="2" stroke-linecap="round"/>
                 <path d="M35 60 L35 90 M65 60 L65 90 M35 70 L65 70" stroke="#ffffff" stroke-width="2"/>
                 <rect x="40" y="50" width="20" height="15" stroke="#F8EF0C" stroke-width="2" fill="none"/>
-            </svg>
-
-            <svg class="splash-svg helmet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
-                <path d="M30 50 Q30 30 50 25 Q70 30 70 50 L70 70 Q70 80 50 85 Q30 80 30 70 Z" stroke="#F8EF0C" stroke-width="3" fill="none" stroke-linejoin="round"/>
-                <path d="M50 25 L50 15 M35 35 L30 25 M65 35 L70 25" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="45" cy="55" r="4" fill="#ffffff"/>
-                <circle cx="55" cy="55" r="4" fill="#ffffff"/>
-                <path d="M45 65 L55 65" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
             </svg>
         </div>
         <div class="splash-text"></div>
@@ -276,8 +287,6 @@
             <li><a href="#proyecto" class="nav-link">Proyecto</a></li>
             <li><a href="#destacados" class="nav-link">Galería</a></li>
             <li><a href="#sobre-nosotros" class="nav-link">Sobre Nosotros</a></li>
-            <li><a href="#mision" class="nav-link">Misión</a></li>
-            <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
             <li><a href="#plan-pagos" class="nav-link">Plan de Pagos</a></li>
             <li><a href="#contacto" class="nav-link">Contacto</a></li>
         </ul>
@@ -306,10 +315,19 @@
     <div class="container">
         <h2 class="section-title">Sobre <span>Sinergia</span></h2>
         <div class="about-container fade-in">
-            <div class="about-image">🌱
-            
-  <img src="https://i.pinimg.com/736x/f0/a4/2c/f0a42cd889a4816ed0246166fbe7757c.jpg" alt="Flor silvestre">
-</div>
+            <div class="about-image-wrapper">
+                <div class="about-image-circle">
+                    <div class="about-image-carousel active" id="carousel-1">
+                        <img src="https://i.pinimg.com/736x/62/ec/93/62ec935317ff7672b6cf363ce8d54dbe.jpg" alt="Imagen Sinergia 1">
+                    </div>
+                    <div class="about-image-carousel" id="carousel-2">
+                        <img src="https://i.pinimg.com/736x/7b/cf/19/7bcf194f406469fbd6881a27f851a9c4.jpg" alt="Imagen Sinergia 2">
+                    </div>
+                    <div class="about-image-carousel" id="carousel-3">
+                        <img src="https://i.pinimg.com/736x/e1/d1/39/e1d1390df5ce9aa4462a762266d51507.jpg" alt="Imagen Sinergia 3">
+                    </div>
+                </div>
+            </div>
             <div class="about-content">
                 <h3>Raíces y Futuro</h3>
                 <p>En Sinergia Constructora creemos en la sinergia entre la tradición de Salta y la modernidad del desarrollo inmobiliario. Desde nuestros inicios, nos hemos comprometido a construir no solo edificios, sino comunidades sostenibles y espacios que mejoren la calidad de vida.</p>
@@ -396,50 +414,6 @@
             <p style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); color: white; padding: 1.5rem; border-radius: 10px; font-weight: 600;">
                 💰 Financiación disponible: hasta 20% en 12 cuotas actualizables al índice CAC
             </p>
-        </div>
-    </div>
-</section>
-
-<section id="testimonios">
-    <div class="container">
-        <h2 class="section-title">Lo que dicen nuestros <span>Clientes</span></h2>
-        <p class="section-subtitle">Historias de satisfacción y confianza</p>
-        <div class="testimonials-grid">
-            <div class="testimonial-card fade-in">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"Trabajar con Sinergia fue excepcional. El equipo fue profesional, comunicativo y entregó nuestro proyecto a tiempo y dentro del presupuesto."</p>
-                <div class="testimonial-author">María García</div>
-                <div class="testimonial-role">Propietaria de vivienda</div>
-            </div>
-            <div class="testimonial-card fade-in">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"La calidad constructiva es impresionante. Cada detalle fue considerado, desde el diseño hasta los acabados finales. Muy recomendables."</p>
-                <div class="testimonial-author">Carlos López</div>
-                <div class="testimonial-role">Empresario inmobiliario</div>
-            </div>
-            <div class="testimonial-card fade-in">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"Sinergia nos ayudó a convertir nuestro sueño en realidad. Su compromiso con la excelencia es evidente en cada aspecto del proyecto."</p>
-                <div class="testimonial-author">Patricia Rodríguez</div>
-                <div class="testimonial-role">Cliente corporativo</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="mision">
-    <div class="fade-in">
-        <div>
-            <div>
-                <h2>Nuestra <span>Misión</span></h2>
-                <p><strong>Diseñamos y construimos proyectos de alto valor</strong> que inspiran bienestar y perduran en el tiempo.</p>
-                <p>Lo logramos a través de <strong>integración estratégica</strong> y compromiso genuino con la excelencia funcional, estética y estructural. Cada metro cuadrado es una promesa cumplida.</p>
-            </div>
-            <div style="margin-top: 3rem;">
-                <h2>Nuestra <span>Visión</span></h2>
-                <p>Ser el <strong>referente indiscutible</strong> en desarrollo inmobiliario de Salta Capital.</p>
-                <p>Nos proyectamos como la <strong>opción más inteligente y confiable</strong> del mercado, elevando continuamente el estándar de diseño, calidad y ejecución. Tu inversión merece lo mejor.</p>
-            </div>
         </div>
     </div>
 </section>
@@ -709,6 +683,23 @@
             showCarouselSlide(carouselIndex);
         });
     });
+
+    // Carrusel de imágenes circulares con animación de rotación aleatoria
+    const aboutCarousels = document.querySelectorAll('.about-image-carousel');
+    let currentCarouselIndex = 0;
+    const rotationIntervals = [8000, 10000, 12000];
+    
+    function rotateAboutImages() {
+        const randomInterval = rotationIntervals[Math.floor(Math.random() * rotationIntervals.length)];
+        
+        aboutCarousels.forEach(carousel => carousel.classList.remove('active'));
+        currentCarouselIndex = (currentCarouselIndex + 1) % aboutCarousels.length;
+        aboutCarousels[currentCarouselIndex].classList.add('active');
+        
+        setTimeout(rotateAboutImages, randomInterval);
+    }
+    
+    setTimeout(rotateAboutImages, 8000);
 
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section');
