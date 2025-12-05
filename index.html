@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinergia Constructora - Desarrollos Inmobiliarios Premium</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+    
 <!-- SEO Meta Tags Optimizadas para NOA Argentina -->
     <meta name="description" content="Sinergia Constructora: Desarrollos inmobiliarios de lujo en Salta y el NOA. Proyectos sostenibles, diseño inteligente y calidad premium en Zona Sur.">
     <meta name="keywords" content="constructora Salta, desarrollos inmobiliarios NOA, viviendas de lujo Salta, construcción sostenible Argentina, proyectos inmobiliarios Tucumán, Jujuy, Catamarca">
@@ -21,3 +30,1870 @@
     
     <title>Sinergia Constructora - Desarrollos Inmobiliarios de Lujo en el NOA</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%2355A203' width='100' height='100'/><path fill='%23FC9E07' d='M50 20 L65 35 L50 50 L35 35 Z'/></svg>">
+
+    <!-- SEO Meta Tags -->
+
+    <meta name="description" content="Sinergia Constructora: Desarrollos inmobiliarios de lujo en Salta y el NOA. Proyectos sostenibles, diseño inteligente y calidad premium.">
+    <meta name="keywords" content="constructora Salta, desarrollos inmobiliarios, viviendas de lujo, construcción sostenible">
+    <meta name="author" content="Sinergia Constructora">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sinergiadesarrolladora.com">
+    <meta property="og:title" content="Sinergia Constructora">
+    <meta property="og:description" content="Desarrollos inmobiliarios de lujo en Salta y el NOA">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%2355A203' width='100' height='100'/><path fill='%23FC9E07' d='M50 20 L65 35 L50 50 L35 35 Z'/></svg>">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --color-primary: #55A203;
+            --color-primary-light: #8CD51D;
+            --color-secondary: #FC9E07;
+            --color-accent-gold: #FFD700;
+            --color-dark: #0a0a0a;
+            --color-dark-alt: #1a1a1a;
+            --color-light: #f8f8f6;
+            --color-gray: #e3e3e3;
+            --color-gray-dark: #a8a8a8;
+            --font-display: 'Bebas Neue', 'Anton', sans-serif;
+            --font-primary: 'Montserrat', sans-serif;
+        }
+        
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: var(--font-primary); 
+            background: var(--color-dark);
+            color: var(--color-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ==================== SPLASH SCREEN ==================== */
+        .splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            animation: fadeOutScreen 1s ease-in-out 3.5s forwards;
+        }
+
+        .splash-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .splash-logo {
+            width: 150px;
+            margin: 0 auto 2rem;
+            opacity: 0;
+            animation: fadeInScale 0.8s ease-out 0.3s forwards;
+            filter: drop-shadow(0 10px 30px rgba(252, 158, 7, 0.4));
+        }
+
+        .splash-text {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--color-secondary);
+            opacity: 0;
+            animation: fadeInScale 0.8s ease-out 1.2s forwards;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        @keyframes fadeOutScreen { to { opacity: 0; visibility: hidden; } }
+        @keyframes fadeInScale { 
+            from { opacity: 0; transform: scale(0.8); } 
+            to { opacity: 1; transform: scale(1); } 
+        }
+
+        /* ==================== LOGO CIRCULAR ==================== */
+        .logo-circle {
+            position: fixed;
+            top: 40px;
+            left: 40px;
+            z-index: 500;
+            width: 90px;
+            height: 90px;
+            background: rgba(85, 162, 3, 0.12);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            backdrop-filter: blur(12px);
+            animation: logoEntrance 0.8s ease-out 3.2s forwards;
+            opacity: 0;
+        }
+
+        .logo-circle:hover {
+            background: rgba(85, 162, 3, 0.25);
+            transform: scale(1.12) rotate(10deg);
+            box-shadow: 0 0 40px rgba(252, 158, 7, 0.5);
+        }
+
+        .logo-circle img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+        }
+
+        @keyframes logoEntrance {
+            from { opacity: 0; transform: translateX(-40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* ==================== MENU TOGGLE ==================== */
+        .menu-toggle {
+            position: fixed;
+            top: 40px;
+            right: 40px;
+            z-index: 999;
+            width: 55px;
+            height: 55px;
+            background: rgba(85, 162, 3, 0.15);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            backdrop-filter: blur(12px);
+            animation: menuEntrance 0.8s ease-out 3.4s forwards;
+            opacity: 0;
+        }
+
+        .menu-toggle:hover {
+            background: rgba(252, 158, 7, 0.2);
+            transform: scale(1.1);
+        }
+
+        .menu-toggle span {
+            width: 22px;
+            height: 2.5px;
+            background: var(--color-secondary);
+            border-radius: 2px;
+            transition: all 0.4s ease;
+            display: block;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(10px, -10px);
+        }
+
+        @keyframes menuEntrance {
+            from { opacity: 0; transform: translateX(40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* ==================== SIDE MENU ==================== */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            right: -380px;
+            width: 350px;
+            height: 100vh;
+            background: rgba(26, 26, 26, 0.98);
+            backdrop-filter: blur(15px);
+            z-index: 998;
+            transition: right 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border-left: 1px solid rgba(85, 162, 3, 0.2);
+            overflow-y: auto;
+            padding: 120px 0 0 0;
+        }
+
+        .side-menu.active {
+            right: 0;
+        }
+
+        .side-menu ul {
+            list-style: none;
+        }
+
+        .side-menu li {
+            border-bottom: 1px solid rgba(85, 162, 3, 0.1);
+        }
+
+        .side-menu a {
+            display: block;
+            padding: 1.8rem 2.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            font-family: var(--font-primary);
+            overflow: hidden;
+        }
+
+        .side-menu a::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--color-secondary), var(--color-primary));
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.3s ease;
+            z-index: -1;
+        }
+
+        .side-menu a:hover {
+            background: rgba(85, 162, 3, 0.1);
+            padding-left: 3.5rem;
+            color: var(--color-secondary);
+        }
+
+        .side-menu a:hover::before {
+            transform: scaleY(1);
+        }
+
+        /* ==================== HERO SECTION ==================== */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Slideshow de fondo con Ken Burns */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://i.pinimg.com/736x/e4/69/52/e4695224551f1eff67f530072f99c217.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            animation: kenBurns 20s ease-in-out infinite alternate;
+            z-index: 0;
+        }
+
+        @keyframes kenBurns {
+            0% { transform: scale(1) translateX(0) translateY(0); }
+            50% { transform: scale(1.12) translateX(3%) translateY(2%); }
+            100% { transform: scale(1.15) translateX(6%) translateY(4%); }
+        }
+
+        /* Overlay oscuro con gradiente */
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.7) 0%, rgba(10, 10, 10, 0.6) 50%, rgba(10, 10, 10, 0.75) 100%);
+            z-index: 1;
+        }
+
+        /* SVG líneas de construcción */
+        .construction-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.06;
+            animation: gridShift 30s linear infinite;
+        }
+
+        @keyframes gridShift {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(100px); }
+        }
+
+        /* ==================== PROYECTOS SIDEBAR ==================== */
+        .projects-sidebar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 220px;
+            height: 100%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 30px;
+            gap: 35px;
+        }
+
+        .project-name {
+            font-family: var(--font-display);
+            font-size: 4.5rem;
+            font-weight: 900;
+            letter-spacing: -3px;
+            line-height: 0.95;
+            text-transform: uppercase;
+            transform: scaleY(1.35);
+            transform-origin: left center;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            opacity: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .project-name:nth-child(1) {
+            color: white;
+            animation: slideInProject 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 3.5s forwards;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(252, 158, 7, 0.1);
+        }
+
+        .project-name:nth-child(2) {
+            color: var(--color-accent-gold);
+            animation: slideInProject 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 3.7s forwards;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.2);
+        }
+
+        .project-name:nth-child(3) {
+            color: white;
+            animation: slideInProject 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 3.9s forwards;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(252, 158, 7, 0.1);
+        }
+
+        .project-name:nth-child(4) {
+            color: var(--color-accent-gold);
+            animation: slideInProject 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 4.1s forwards;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.2);
+        }
+
+        @keyframes slideInProject {
+            from {
+                opacity: 0;
+                transform: scaleY(1.35) translateX(-60px);
+            }
+            to {
+                opacity: 1;
+                transform: scaleY(1.35) translateX(0px);
+            }
+        }
+
+        .project-name:hover {
+            transform: scaleY(1.35) scale(1.08) translateX(8px);
+            filter: drop-shadow(0 0 30px rgba(252, 158, 7, 0.6));
+        }
+
+        .project-name .top {
+            display: block;
+            line-height: 1;
+        }
+
+        .project-name .bottom {
+            display: block;
+            line-height: 1;
+            margin-top: 6px;
+        }
+
+        /* ==================== CONTENIDO CENTRAL HERO ==================== */
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 3;
+            max-width: 900px;
+            padding: 0 2rem;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 8vw, 5.5rem);
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1.5rem;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            text-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(252, 158, 7, 0.2);
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 3.8s forwards;
+        }
+
+        .hero-content h1 .accent {
+            color: var(--color-secondary);
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: colorPulse 4s ease-in-out infinite;
+        }
+
+        @keyframes colorPulse {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.3); }
+        }
+
+        .hero-content p {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: var(--color-gray);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 4s forwards;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: linear-gradient(135deg, var(--color-secondary) 0%, #fd8f00 100%);
+            color: var(--color-dark);
+            padding: 1.3rem 3.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-family: var(--font-primary);
+            font-size: 1.1rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 20px 50px rgba(252, 158, 7, 0.35);
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 4.2s forwards;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-6px) scale(1.1);
+            box-shadow: 0 30px 70px rgba(252, 158, 7, 0.5);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ==================== SCROLL INDICATOR ==================== */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 4;
+            animation: bounce 2s ease-in-out infinite 4.5s;
+        }
+
+        .scroll-indicator svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--color-secondary);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        /* ==================== SECTIONS ==================== */
+        section {
+            padding: 8rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(85, 162, 3, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(252, 158, 7, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        section > * { position: relative; z-index: 1; }
+
+        .container { 
+            max-width: 1400px; 
+            margin: 0 auto; 
+            padding: 0 2rem; 
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            color: var(--color-light);
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            line-height: 1.1;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-title span {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ==================== ABOUT SECTION ==================== */
+        #sobre-nosotros {
+            background-image: url('https://i.pinimg.com/736x/62/ec/93/62ec935317ff7672b6cf363ce8d54dbe.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #sobre-nosotros::before {
+            background: rgba(10, 10, 10, 0.75);
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-image-circle {
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 40px 100px rgba(85, 162, 3, 0.4);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+        }
+
+        .about-image-circle:hover {
+            transform: scale(1.08) rotate(5deg);
+            box-shadow: 0 50px 120px rgba(85, 162, 3, 0.5);
+        }
+
+        .about-image-carousel {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1.2s ease-in-out;
+        }
+
+        .about-image-carousel.active {
+            opacity: 1;
+        }
+
+        .about-image-carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .about-content h3 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.8rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .about-content p {
+            color: #d3d3d3;
+            margin-bottom: 1.8rem;
+            line-height: 2;
+            font-size: 1.08rem;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+            margin-top: 3rem;
+        }
+
+        .value-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.8rem;
+            background: rgba(85, 162, 3, 0.08);
+            border-left: 4px solid var(--color-secondary);
+            border-radius: 10px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(252, 158, 7, 0.1), transparent);
+            transition: right 0.6s ease;
+        }
+
+        .value-item:hover {
+            background: rgba(85, 162, 3, 0.15);
+            transform: translateX(15px) scale(1.05);
+            border-color: var(--color-primary);
+            box-shadow: 0 10px 30px rgba(85, 162, 3, 0.2);
+        }
+
+        .value-item:hover::before {
+            right: 100%;
+        }
+
+        .value-icon {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+            box-shadow: 0 8px 20px rgba(85, 162, 3, 0.4);
+            position: relative;
+            z-index: 1;
+        }
+
+        .value-item h4 {
+            font-family: var(--font-primary);
+            color: var(--color-light);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .value-item p {
+            color: var(--color-gray-dark);
+            font-size: 0.98rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ==================== PROJECT SECTION ==================== */
+        #proyecto {
+            background-image: url('https://i.pinimg.com/736x/4d/fc/56/4dfc56e4855f1c93b9d553bedeaf219a.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #proyecto::before {
+            background: rgba(10, 10, 10, 0.75);
+        }
+
+        .proyecto-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .proyecto-content h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 900;
+            color: var(--color-light);
+            margin-bottom: 1.8rem;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+
+        .proyecto-content h2 .highlight {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .proyecto-content p {
+            font-size: 1.1rem;
+            color: #d3d3d3;
+            margin-bottom: 1.8rem;
+            line-height: 2;
+        }
+
+        .proyecto-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 2.5rem 0;
+        }
+
+        .feature-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.9rem 1.8rem;
+            background: rgba(85, 162, 3, 0.15);
+            border-radius: 30px;
+            font-weight: 700;
+            color: var(--color-primary);
+            font-size: 0.98rem;
+            transition: all 0.4s ease;
+            border: 2px solid rgba(85, 162, 3, 0.4);
+            cursor: pointer;
+            font-family: var(--font-primary);
+        }
+
+        .feature-tag:hover {
+            background: rgba(252, 158, 7, 0.2);
+            transform: translateX(8px) scale(1.1);
+            border-color: var(--color-secondary);
+            color: var(--color-secondary);
+            box-shadow: 0 8px 20px rgba(252, 158, 7, 0.25);
+        }
+
+        .proyecto-carousel {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4/3;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+
+        .proyecto-carousel:hover {
+            transform: scale(1.04);
+            box-shadow: 0 40px 100px rgba(85, 162, 3, 0.5);
+        }
+
+        .carousel-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            display: flex;
+            gap: 12px;
+        }
+
+        .carousel-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.4s;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .carousel-dot.active {
+            background: var(--color-secondary);
+            transform: scale(1.4);
+            border-color: var(--color-secondary);
+            box-shadow: 0 0 15px rgba(252, 158, 7, 0.6);
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 55px;
+            height: 55px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.4s;
+            color: white;
+            background: none;
+        }
+
+        .carousel-nav:hover {
+            background: var(--color-secondary);
+            border-color: var(--color-secondary);
+            color: var(--color-dark);
+            transform: translateY(-50%) scale(1.15);
+            box-shadow: 0 10px 30px rgba(252, 158, 7, 0.4);
+        }
+
+        .carousel-nav.prev { left: 15px; }
+        .carousel-nav.next { right: 15px; }
+
+        /* ==================== FEATURED PROJECTS ==================== */
+        #destacados {
+            background-image: url('https://i.pinimg.com/736x/99/6b/23/996b23d4a03f17c968633eaf2917ceeb.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #destacados::before {
+            background: rgba(10, 10, 10, 0.75);
+        }
+
+        .proyectos-destacados-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .proyectos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.8rem;
+        }
+
+        .proyecto-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            aspect-ratio: 1;
+            cursor: pointer;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            transition: all 0.5s ease;
+        }
+
+        .proyecto-card:hover {
+            transform: translateY(-15px) scale(1.08);
+            box-shadow: 0 30px 80px rgba(85, 162, 3, 0.4);
+        }
+
+        .proyecto-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .proyecto-card:hover img {
+            transform: scale(1.15) rotate(3deg);
+        }
+
+        .proyecto-card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.5));
+            padding: 2.5rem 2rem 2rem;
+            color: white;
+            transform: translateY(30px);
+            transition: transform 0.4s ease;
+        }
+
+        .proyecto-card:hover .proyecto-card-overlay {
+            transform: translateY(0);
+        }
+
+        .proyecto-card-title {
+            font-family: var(--font-primary);
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 0.7rem;
+        }
+
+        .proyecto-card-desc {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* ==================== WHY SINERGIA ==================== */
+        #por-que {
+            background-image: url('https://i.pinimg.com/736x/d3/3f/57/d33f572bdd25c39a53ababc75b886cc0.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #por-que::before {
+            background: rgba(10, 10, 10, 0.75);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
+            max-width: 1300px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .why-card {
+            padding: 2.8rem;
+            border: 2px solid rgba(85, 162, 3, 0.25);
+            background: rgba(85, 162, 3, 0.08);
+            border-radius: 15px;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .why-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(85, 162, 3, 0.15), transparent);
+            transition: left 0.6s ease;
+            z-index: 0;
+        }
+
+        .why-card:hover::before {
+            left: 100%;
+        }
+
+        .why-card:hover {
+            background: rgba(85, 162, 3, 0.18);
+            border-color: var(--color-secondary);
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(85, 162, 3, 0.3);
+        }
+
+        .why-card h3 {
+            color: var(--color-secondary);
+            margin-bottom: 1.3rem;
+            font-family: var(--font-primary);
+            font-size: 1.5rem;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+        }
+
+        .why-card p {
+            color: #d3d3d3;
+            line-height: 1.9;
+            font-size: 1.05rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ==================== CONTACT ==================== */
+        #contacto {
+            background-image: url('https://i.pinimg.com/736x/fa/3d/0e/fa3d0e8f8c5e386b18169a50ea58dde8.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #contacto::before {
+            background: rgba(10, 10, 10, 0.75);
+        }
+
+        .contact-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 900;
+            color: var(--color-light);
+            margin-bottom: 2.8rem;
+            grid-column: 1 / -1;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+
+        .contact h2 span {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1.8rem;
+            padding: 1.8rem;
+            background: rgba(85, 162, 3, 0.08);
+            border-left: 4px solid var(--color-secondary);
+            border-radius: 12px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(252, 158, 7, 0.1), transparent);
+            transition: right 0.6s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(85, 162, 3, 0.15);
+            transform: translateX(15px);
+            box-shadow: 0 10px 30px rgba(85, 162, 3, 0.25);
+        }
+
+        .contact-item:hover::before {
+            right: 100%;
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--color-secondary);
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-details h4 {
+            font-weight: 800;
+            margin-bottom: 0.6rem;
+            color: var(--color-light);
+            font-family: var(--font-primary);
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-details p {
+            color: #d3d3d3;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-details a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 700;
+        }
+
+        .contact-details a:hover {
+            color: var(--color-secondary);
+            text-decoration: underline;
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--color-light);
+            font-family: var(--font-primary);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1.1rem;
+            border: 2px solid rgba(85, 162, 3, 0.3);
+            background: rgba(85, 162, 3, 0.08);
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 1rem;
+            color: #e3e3e3;
+            transition: all 0.4s;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--color-gray-dark);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-secondary);
+            background: rgba(85, 162, 3, 0.12);
+            box-shadow: 0 0 0 4px rgba(252, 158, 7, 0.15);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .btn {
+            padding: 1.3rem 2.8rem;
+            font-size: 1.05rem;
+            font-weight: 800;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            font-family: var(--font-primary);
+            letter-spacing: 0.8px;
+            width: 100%;
+            background: linear-gradient(135deg, var(--color-secondary) 0%, #fd8f00 100%);
+            color: var(--color-dark);
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(252, 158, 7, 0.4);
+        }
+
+        .map-container {
+            width: 100%;
+            height: 450px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            margin-top: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ==================== WHATSAPP BUTTON ==================== */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #25D366 0%, #20BA58 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            text-decoration: none;
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.5);
+            transition: all 0.4s ease;
+            z-index: 998;
+            animation: fadeIn 1s ease-out 4.5s forwards;
+            opacity: 0;
+            border: none;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.15) rotate(15deg);
+            box-shadow: 0 15px 50px rgba(37, 211, 102, 0.6);
+        }
+
+        /* ==================== FOOTER ==================== */
+        footer {
+            background: rgba(26, 26, 26, 0.95);
+            color: #d3d3d3;
+            padding: 5rem 2rem;
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid rgba(85, 162, 3, 0.2);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .footer-section h4 {
+            font-family: var(--font-primary);
+            font-weight: 800;
+            margin-bottom: 1.4rem;
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+        }
+
+        .footer-section p {
+            color: var(--color-gray-dark);
+            line-height: 1.9;
+        }
+
+        .footer-section a {
+            color: #d3d3d3;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-size: 0.98rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--color-secondary);
+            transform: translateX(8px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(85, 162, 3, 0.2);
+            font-size: 0.95rem;
+            color: var(--color-gray-dark);
+        }
+
+        /* ==================== ANIMATIONS ==================== */
+        .fade-in { opacity: 0; }
+        .fade-in.visible { animation: fadeInUp 0.8s ease-out forwards; }
+
+        @keyframes fadeIn { to { opacity: 1; } }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 1200px) {
+            .projects-sidebar {
+                width: 180px;
+                padding-left: 20px;
+            }
+
+            .project-name {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .projects-sidebar {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .hero-cta {
+                padding: 1rem 2rem;
+                font-size: 0.95rem;
+            }
+
+            .proyecto-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .map-container {
+                height: 300px;
+                margin-top: 2.5rem;
+            }
+
+            .logo-circle {
+                width: 70px;
+                height: 70px;
+                top: 20px;
+                left: 20px;
+            }
+
+            .menu-toggle {
+                width: 50px;
+                height: 50px;
+                top: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            section {
+                padding: 3.5rem 1.2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .about-image-circle {
+                width: 200px;
+                height: 200px;
+            }
+
+            .whatsapp-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 1.5rem;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .project-name {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- SPLASH SCREEN -->
+<div class="splash-screen">
+    <div class="splash-content">
+        <img src="https://i.pinimg.com/736x/17/ab/b9/17abb909c0d4c30191b969f6cd81d533.jpg" alt="Logo" class="splash-logo">
+        <p class="splash-text">Sinergia</p>
+    </div>
+</div>
+
+<!-- LOGO CIRCULAR -->
+<a href="#inicio" class="logo-circle">
+    <img src="https://i.pinimg.com/736x/17/ab/b9/17abb909c0d4c30191b969f6cd81d533.jpg" alt="Logo Sinergia">
+</a>
+
+<!-- MENU TOGGLE -->
+<button class="menu-toggle" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<!-- SIDE MENU -->
+<nav class="side-menu" id="sideMenu">
+    <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+        <li><a href="#proyecto">Proyecto</a></li>
+        <li><a href="#destacados">Galería</a></li>
+        <li><a href="#por-que">¿Por Qué?</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero" id="inicio">
+    <!-- SVG Grid animado -->
+    <svg class="construction-grid" viewBox="0 0 1920 1080" preserveAspectRatio="none">
+        <defs>
+            <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="0" x2="100" y2="0" stroke="rgba(85,162,3,0.4)" stroke-width="1"/>
+                <line x1="0" y1="0" x2="0" y2="100" stroke="rgba(85,162,3,0.4)" stroke-width="1"/>
+                <circle cx="0" cy="0" r="3" fill="rgba(252,158,7,0.3)"/>
+                <circle cx="100" cy="100" r="3" fill="rgba(252,158,7,0.3)"/>
+            </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)"/>
+        <line x1="0" y1="0" x2="1920" y2="1080" stroke="rgba(252,158,7,0.15)" stroke-width="2"/>
+        <line x1="1920" y1="0" x2="0" y2="1080" stroke="rgba(252,158,7,0.15)" stroke-width="2"/>
+        <circle cx="960" cy="540" r="300" fill="none" stroke="rgba(85,162,3,0.1)" stroke-width="2"/>
+        <circle cx="960" cy="540" r="500" fill="none" stroke="rgba(252,158,7,0.08)" stroke-width="1.5"/>
+    </svg>
+
+    <!-- Proyectos Sidebar -->
+    <div class="projects-sidebar">
+        <div class="project-name">
+            <span class="top">EKO</span>
+            <span class="bottom">DIST</span>
+        </div>
+        <div class="project-name">
+            <span class="top">AND</span>
+            <span class="bottom">INO</span>
+        </div>
+        <div class="project-name">
+            <span class="top">URB</span>
+            <span class="bottom">ANO</span>
+        </div>
+        <div class="project-name">
+            <span class="top">LUX</span>
+            <span class="bottom">URY</span>
+        </div>
+    </div>
+
+    <!-- Contenido Central -->
+    <div class="hero-content">
+        <h1>Tu próximo hogar está en <span class="accent">construcción</span></h1>
+        <p>Diseño inteligente, ubicación privilegiada y calidad constructiva en Zona Sur</p>
+        <a href="#proyecto" class="hero-cta">
+            <span>Descubrí el Proyecto</span>
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+        <svg viewBox="0 0 24 24">
+            <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="sobre-nosotros">
+    <div class="container">
+        <h2 class="section-title">Sobre <span>Sinergia</span></h2>
+        <div class="about-container fade-in">
+            <div>
+                <div class="about-image-circle">
+                    <div class="about-image-carousel active">
+                        <img src="https://i.pinimg.com/736x/62/ec/93/62ec935317ff7672b6cf363ce8d54dbe.jpg" alt="Proyecto 1">
+                    </div>
+                    <div class="about-image-carousel">
+                        <img src="https://i.pinimg.com/736x/7b/cf/19/7bcf194f406469fbd6881a27f851a9c4.jpg" alt="Proyecto 2">
+                    </div>
+                    <div class="about-image-carousel">
+                        <img src="https://i.pinimg.com/736x/e1/d1/39/e1d1390df5ce9aa4462a762266d51507.jpg" alt="Proyecto 3">
+                    </div>
+                </div>
+            </div>
+            <div class="about-content">
+                <h3>Raíces y Futuro</h3>
+                <p>Sinergia es la unidad de desarrollo y construcción nacida directamente del Corralón Don Coco. Más que una expansión, nacimos como una respuesta para cerrar el círculo: detectamos que la mejor forma de garantizar una obra exitosa era controlando todo el proceso, desde el primer ladrillo hasta la entrega de la llave.</p>
+                <p>¿Qué nos define? Como nuestro nombre lo indica, somos la integración estratégica. Unimos la solidez de Don Coco con un equipo técnico especializado. Esto nos permite volcar nuestros 14 años de experiencia y pasión por la construcción para asegurar que los materiales lleguen a tiempo, la calidad sea la prometida, y su inversión sea segura.</p>
+                
+                <div class="values-grid">
+                    <div class="value-item">
+                        <div class="value-icon">✓</div>
+                        <div>
+                            <h4>Calidad</h4>
+                            <p>Materiales de primer nivel</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">🌍</div>
+                        <div>
+                            <h4>Sostenibilidad</h4>
+                            <p>Respeto ambiental</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">🤝</div>
+                        <div>
+                            <h4>Confianza</h4>
+                            <p>Total transparencia</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">⚡</div>
+                        <div>
+                            <h4>Innovación</h4>
+                            <p>Diseño moderno</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECT SECTION -->
+<section id="proyecto">
+    <div class="proyecto-grid">
+        <div class="proyecto-content fade-in">
+            <h2>Proyecto en <span class="highlight">Venta</span></h2>
+            <p><strong style="color: var(--color-secondary); font-size: 1.15rem;">EKO Distrito</strong> es el resultado de años de investigación en diseño sostenible y construcción de excelencia. Dos unidades de vivienda en dúplex, pensadas para familias que valoran el espacio, la luz natural y la conectividad.</p>
+            <p>Cada unidad ofrece dos plantas bien distribuidas, con amplios espacios comunes, orientación que maximiza la iluminación solar, y acceso a servicios de primera calidad. Tu hogar merece lo mejor.</p>
+            <div class="proyecto-features">
+                <span class="feature-tag">✓ Diseño moderno</span>
+                <span class="feature-tag">✓ Área premium</span>
+                <span class="feature-tag">✓ Listo para vivir</span>
+                <span class="feature-tag">✓ Oportunidad</span>
+            </div>
+            <p style="font-weight: 700; color: var(--color-secondary); font-size: 1.15rem; margin-top: 3rem;">Contactanos para conocer los detalles →</p>
+        </div>
+
+        <div class="proyecto-carousel">
+            <div class="carousel-slide active">
+                <img src="https://i.pinimg.com/736x/e4/69/52/e4695224551f1eff67f530072f99c217.jpg" alt="Interior">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://i.pinimg.com/736x/5a/07/fc/5a07fcd1bba65ee56c38d814c7250532.jpg" alt="Dormitorio">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://i.pinimg.com/736x/42/92/0c/42920c0c0d9e874d3a84166aa9737659.jpg" alt="Exterior">
+            </div>
+            <div class="carousel-controls">
+                <div class="carousel-dot active" data-slide="0"></div>
+                <div class="carousel-dot" data-slide="1"></div>
+                <div class="carousel-dot" data-slide="2"></div>
+            </div>
+            <button class="carousel-nav prev">❮</button>
+            <button class="carousel-nav next">❯</button>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURED PROJECTS -->
+<section id="destacados">
+    <div class="proyectos-destacados-container">
+        <h2 class="section-title">Proyectos <span>Destacados</span></h2>
+        <div class="proyectos-grid">
+            <div class="proyecto-card fade-in">
+                <img src="https://i.pinimg.com/736x/99/6b/23/996b23d4a03f17c968633eaf2917ceeb.jpg" alt="Residencial">
+                <div class="proyecto-card-overlay">
+                    <div class="proyecto-card-title">Residencial Andino</div>
+                    <div class="proyecto-card-desc">Complejo residencial con vista a la Cordillera</div>
+                </div>
+            </div>
+            <div class="proyecto-card fade-in">
+                <img src="https://i.pinimg.com/736x/d3/3f/57/d33f572bdd25c39a53ababc75b886cc0.jpg" alt="PH">
+                <div class="proyecto-card-overlay">
+                    <div class="proyecto-card-title">PH Urbano Sur</div>
+                    <div class="proyecto-card-desc">Penthouse de lujo en zona céntrica</div>
+                </div>
+            </div>
+            <div class="proyecto-card fade-in">
+                <img src="https://i.pinimg.com/736x/fa/3d/0e/fa3d0e8f8c5e386b18169a50ea58dde8.jpg" alt="Lofts">
+                <div class="proyecto-card-overlay">
+                    <div class="proyecto-card-title">Lofts Contemporáneos</div>
+                    <div class="proyecto-card-desc">Espacios abiertos con estilo industrial</div>
+                </div>
+            </div>
+            <div class="proyecto-card fade-in">
+                <img src="https://i.pinimg.com/736x/90/52/d0/9052d02125f1cbec4fa2bfc81f460849.jpg" alt="Sustentable">
+                <div class="proyecto-card-overlay">
+                    <div class="proyecto-card-title">Vivienda Sustentable</div>
+                    <div class="proyecto-card-desc">Construcción eco-amigable</div>
+                </div>
+            </div>
+            <div class="proyecto-card fade-in">
+                <img src="https://i.pinimg.com/736x/a8/26/b5/a826b5964d4e76fd689820e92da2b42c.jpg" alt="Complejo">
+                <div class="proyecto-card-overlay">
+                    <div class="proyecto-card-title">Complejo Residencial</div>
+                    <div class="proyecto-card-desc">Comunidad integrada con servicios premium</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY SINERGIA -->
+<section id="por-que">
+    <div class="container">
+        <h2 class="section-title">¿Por Qué <span>Sinergia?</span></h2>
+        <div class="why-grid">
+            <div class="why-card fade-in">
+                <h3>🔗 Integración</h3>
+                <p>Conectamos cadena de suministro con ejecución. Garantizamos calidad y plazos comprometidos en cada proyecto.</p>
+            </div>
+            <div class="why-card fade-in">
+                <h3>✨ Calidad</h3>
+                <p>Nos obsesionamos con el detalle. Creamos activos que aumentan su valor con el tiempo.</p>
+            </div>
+            <div class="why-card fade-in">
+                <h3>🛡️ Seguridad</h3>
+                <p>La confianza es nuestro principal activo. Tu inversión merece claridad absoluta.</p>
+            </div>
+            <div class="why-card fade-in">
+                <h3>💡 Innovación</h3>
+                <p>Optimizamos inteligentemente. Tu inversión trabajará para ti desde el día uno.</p>
+            </div>
+            <div class="why-card fade-in">
+                <h3>🏆 Maestría</h3>
+                <p>10+ años de experiencia. Supervisión técnica rigurosa en cada etapa del proyecto.</p>
+            </div>
+            <div class="why-card fade-in">
+                <h3>🤝 Tu Socio</h3>
+                <p>Transparencia, cercanía, profesionalismo. Tu éxito es nuestro éxito.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contacto">
+    <div class="contact-container">
+        <h2>Ponte en <span>Contacto</span></h2>
+        <div class="contact-info fade-in">
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-details">
+                    <h4>Ubicación</h4>
+                    <p>Zona Sur, Salta, Argentina</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div class="contact-details">
+                    <h4>Teléfono</h4>
+                    <p><a href="tel:+5493872233151">+54 9 387 2233151</a></p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div class="contact-details">
+                    <h4>Email</h4>
+                    <p><a href="mailto:info@sinergiadesarrolladora.com">info@sinergiadesarrolladora.com</a></p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">💬</div>
+                <div class="contact-details">
+                    <h4>WhatsApp</h4>
+                    <p><a href="https://wa.me/5493872233151" target="_blank">+54 9 387 2233151</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="fade-in">
+            <h3 style="color: var(--color-secondary); margin-bottom: 2.5rem; font-family: var(--font-primary); font-weight: 800; font-size: 1.6rem;">Envíanos tu Consulta</h3>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+54 9 387 XXXXXXX">
+                </div>
+                <div class="form-group">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="¿En qué podemos ayudarte?" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos detalles de tu consulta..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar Consulta</button>
+            </form>
+        </div>
+    </div>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3575.78!2d-65.41!3d-24.78!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b3fba%3A0x0!2sZona%20Sur%2C%20Salta!5e0!3m2!1ses!2sar!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/5493872233151?text=Hola%20Sinergia%20Constructora" class="whatsapp-btn" target="_blank" title="Contactanos por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Sinergia Desarrolladora</h4>
+            <p>Desarrolladora inmobiliaria comprometida con excelencia, innovación y sostenibilidad en Salta y el NOA.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Enlaces Rápidos</h4>
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-nosotros">Sobre Nosotros</a>
+            <a href="#proyecto">Proyecto</a>
+            <a href="#destacados">Galería</a>
+            <a href="#por-que">¿Por Qué?</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <div class="footer-section">
+            <h4>Contacto</h4>
+            <a href="tel:+5493872233151">📞 +54 9 387 2233151</a>
+            <a href="mailto:info@sinergiadesarrolladora.com">✉️ Email</a>
+            <a href="https://wa.me/5493872233151" target="_blank">💬 WhatsApp</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Sinergia Inmobiliaria. Todos los derechos reservados.</p>
+        <p style="margin-top: 1rem;">Salta, Argentina | Diseño y Desarrollo: Sinergia Constructora</p>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const sideMenu = document.getElementById('sideMenu');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            sideMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking links
+        const menuLinks = sideMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                sideMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', (e) => {
+                const href = anchor.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // About carousel
+        const aboutCarousels = document.querySelectorAll('.about-image-carousel');
+        let aboutIndex = 0;
+
+        function rotateAbout() {
+            aboutCarousels.forEach(c => c.classList.remove('active'));
+            aboutIndex = (aboutIndex + 1) % aboutCarousels.length;
+            aboutCarousels[aboutIndex].classList.add('active');
+            setTimeout(rotateAbout, 8000);
+        }
+
+        if (aboutCarousels.length > 0) {
+            setTimeout(rotateAbout, 8000);
+        }
+
+        // Project carousel
+        let carouselIndex = 0;
+        const carouselSlides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+
+        function showSlide(i) {
+            carouselSlides.forEach(s => s.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
+            carouselSlides[i].classList.add('active');
+            dots[i].classList.add('active');
+        }
+
+        document.querySelectorAll('.carousel-nav.prev').forEach(btn => {
+            btn.addEventListener('click', () => {
+                carouselIndex = (carouselIndex - 1 + carouselSlides.length) % carouselSlides.length;
+                showSlide(carouselIndex);
+            });
+        });
+
+        document.querySelectorAll('.carousel-nav.next').forEach(btn => {
+            btn.addEventListener('click', () => {
+                carouselIndex = (carouselIndex + 1) % carouselSlides.length;
+                showSlide(carouselIndex);
+            });
+        });
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                carouselIndex = i;
+                showSlide(i);
+            });
+        });
+
+        // Fade in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Contact form
+        const form = document.getElementById('contactForm');
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const nombre = document.getElementById('nombre').value.trim();
+                const email = document.getElementById('email').value.trim();
+                if (!nombre || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    alert('Por favor completa los campos correctamente');
+                    return;
+                }
+                alert('¡Gracias! Tu consulta ha sido enviada. Nos contactaremos pronto.');
+                form.reset();
+            });
+        }
+    });
+</script>
+</body>
+</html>
