@@ -71,42 +71,7 @@
             text-align: center;
         }
 
-        .splash-logo {
-            width: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 2.5rem;
-            opacity: 0;
-            animation: fadeInLogo 0.8s ease-out 0.5s forwards;
-        }
-
-        .splash-isologo {
-            width: 320px;
-            opacity: 0;
-            animation: fadeInLogo 0.8s ease-out 1.2s forwards;
-        }
-
-        .splash-text {
-            color: white;
-            font-size: 1.3rem;
-            max-width: 450px;
-            opacity: 0;
-            animation: fadeInLogo 0.8s ease-out 2s forwards;
-            font-weight: 600;
-            font-family: var(--font-primary);
-            letter-spacing: 1px;
-        }
-
-        @keyframes fadeOutScreen {
-            to { opacity: 0; visibility: hidden; }
-        }
-
-        @keyframes fadeInLogo {
-            from { opacity: 0; } 
-            to { opacity: 1; }
-        }
+    
 
         /* ==================== HEADER ==================== */
         header { 
@@ -1157,10 +1122,7 @@
 <!-- SPLASH SCREEN -->
 <div class="splash-screen">
     <div class="splash-content">
-        <div class="splash-logo">
-            <img src="https://i.pinimg.com/736x/80/e3/dc/80e3dcf22e2f5554d6e107b95739f7fa.jpg" alt="Sinergia" class="splash-isologo">
-            <p class="splash-text">Desarrollos Inmobiliarios Inteligentes</p>
-        </div>
+    
     </div>
 </div>
 
